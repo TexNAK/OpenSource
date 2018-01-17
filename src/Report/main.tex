@@ -1,0 +1,78 @@
+\documentclass[a4paper]{report}
+% \documentclass[a4paper]{book}
+
+% Imports
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{epigraph}
+\usepackage{subfiles}
+\usepackage[acronym,toc]{glossaries}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{tkz-graph}
+
+
+\usetikzlibrary{positioning}
+
+% Title page
+\title{Open Source \\
+    \noindent\rule[0.25ex]{\linewidth}{0.5pt}
+    \large Ein zukunftsweisendes Konzept?
+}
+\author{Til Blechschmidt}
+\author{
+  Blechschmidt, Til\\
+  \texttt{til@blechschmidt.de}
+  \and
+  Peeters, Noah\\
+  \texttt{noah.peeters@icloud.com}
+}
+
+% Numbering
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+% Quote styling
+\setlength\epigraphwidth{.8\textwidth}
+\setlength\epigraphrule{0pt}
+
+
+\begin{document}
+    % Title page
+	\thispagestyle{fancy}
+	\maketitle
+
+    % Abstract
+ 	\begin{abstract}
+         Das folgende Dokument fasst alle Inhalte zusammen, die die Autoren im Laufe des Studiengangs Angewandte Informatik sowie in zusätzlichen Seminaren an der Nordakademie vermittelt bekommen haben.
+ 	\end{abstract}
+ 	\newpage
+
+	% TOC
+	\tableofcontents
+
+	% --- Vorlesungsinhalte ---
+	\part{Diskrete Mathematik}
+		\chapter{smth}
+			blabla
+
+    
+    \clearpage
+    \part{Appendix}
+    
+    	\clearpage
+    	\printglossary[type=\acronymtype]
+        \printglossary
+        
+        \clearpage
+        \bibliographystyle{unsrt}
+        \bibliography{references}
+        
+        \listoffigures
+
+\end{document}
