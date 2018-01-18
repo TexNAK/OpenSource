@@ -31,7 +31,7 @@ script:
   - cd ../..
 
 after_success:
-  - ./build/analyze_text.py "${GITHUB_ACCESS_TOKEN}" "${TRAVIS_REPO_SLUG}" "${TRAVIS_PULL_REQUEST}" "./src/main.tex"
+  - ./build/analyze_text.py "${GITHUB_ACCESS_TOKEN}" "${TRAVIS_REPO_SLUG}" "${TRAVIS_PULL_REQUEST}" "./src/Expose/main.tex" "./src/Report/main.tex"
 
 deploy:
   provider: releases
