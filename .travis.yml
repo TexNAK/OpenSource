@@ -1,7 +1,16 @@
 sudo: required
 
+language: python
+python:
+  - "3.6"
+
 services:
   - docker
+
+addons:
+  apt:
+    packages:
+      - poppler-utils
 
 git:
   submodules: false
@@ -11,6 +20,7 @@ before_install:
   - git submodule update --init --recursive
 
 install:
+  - pip install pygithub
   - ./build/pull_with_timeout.sh
 
 script:
