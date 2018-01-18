@@ -11,7 +11,7 @@ before_install:
   - git submodule update --init --recursive
 
 install:
-  - docker pull blang/latex
+  - ./build/pull_with_timeout.sh
 
 script:
   - cd src/Expose && ../../build/dockercmd.sh /bin/sh -c "latexmk -f -pdf -xelatex -shell-escape -interaction=nonstopmode -halt-on-error main.tex"
@@ -19,6 +19,9 @@ script:
   - cd ../Report && ../../build/dockercmd.sh /bin/sh -c "latexmk -f -pdf -xelatex -shell-escape -interaction=nonstopmode -halt-on-error main.tex"
   - cp main.pdf ../../OpenSource.pdf
   - cd ../..
+
+after_success:
+  - ./build/analyze_text.py "${GITHUB_ACCESS_TOKEN}" "${TRAVIS_REPO_SLUG}" "${TRAVIS_PULL_REQUEST}" "./src/main.tex"
 
 deploy:
   provider: releases
