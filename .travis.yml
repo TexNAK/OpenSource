@@ -42,8 +42,7 @@ deploy:
     - Expose.pdf
     - OpenSource.pdf
   prerelease: true
-  name: "CI Pre-release"
-  body: "This pre-release was automatically issued by the CI-System triggered by the merge of a pull request. Note that there are no guarantees regarding quality or completeness of the document appended to this release since it was automatically built."
+  name: "${TRAVIS_COMMIT_MESSAGE}"
   on:
     repo: TexNAK/OpenSource
     branch: "master"
