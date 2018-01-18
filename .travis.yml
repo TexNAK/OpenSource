@@ -24,9 +24,9 @@ install:
   - ./build/pull_with_timeout.sh
 
 script:
-  - cd src/Expose && ../../build/dockercmd.sh /bin/sh -c "latexmk -f -pdf -xelatex -shell-escape -interaction=nonstopmode -halt-on-error main.tex"
+  - cd src/Expose && ../../build/dockercmd.sh "latexmk -f -pdf -xelatex -shell-escape -interaction=nonstopmode -halt-on-error main.tex"
   - cp main.pdf ../../Expose.pdf
-  - cd ../Report && ../../build/dockercmd.sh /bin/sh -c "latexmk -f -pdf -xelatex -shell-escape -interaction=nonstopmode -halt-on-error main.tex"
+  - cd ../Report && ../../build/dockercmd.sh "latexmk -f -pdf -xelatex -shell-escape -interaction=nonstopmode -halt-on-error main.tex"
   - cp main.pdf ../../OpenSource.pdf
   - cd ../..
 
