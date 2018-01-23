@@ -14,11 +14,10 @@
 \usepackage{hyperref}
 \usepackage{siunitx}
 \usepackage{tkz-graph}
-\usepackage{natbib}
-
-\bibliographystyle{agsm}
+\usepackage[style=verbose]{biblatex}
 
 
+\bibliography{../Bibliography}
 \usetikzlibrary{positioning}
 
 % Title page
@@ -51,20 +50,49 @@
 	\clearpage
 	
 	\section{Einführung}
+	   Je ein Satz zu den folgenden Punkten:
+	   \begin{enumerate}
+	       \item Ziel
+	       \item Erwartung
+	       \item Methodik
+	       \item Fragestellung
+	   \end{enumerate}
+	
+	   In der Arbeit soll die Frage, in wie weit Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekter} Nutzung als Komponente kommerzieller Lösungen wie Linux als Basis von Android.
+	   
+	   Dabei ist die Erwartung, dass nur einem kleinen Teil bewusst ist, wie viel Open Source Software in ihrem täglichen Alltag ausmacht.
+	   
+	   Als Grundlage wird eine qualitative Umfrage über 2 Wochen dienen, damit die aktuelle Situation möglichst akkurat in die Argumentation einfließt.
+	   
+	\clearpage
+	
+	\section{Umfrage}
+%    TODO: vernünftig schreiben
+	   Die Umfrage soll Antworten für die Leitfrage bringen. Dabei ist interessant, wie viel Open Source Software direkt oder indirekt verwendet wird und wie sich dies von der bewussten Wahrnehmung unterscheidet. Dafür soll die Umfrage in drei Teile geteilt werden:
+	   
+	   \paragraph{Abstrakte Fragen}
+	       Die Umfrage wird mit abstrakten Fragen zur Nutzung von Open Source Software beginnen. Zunächst soll ermittelt werden, ob der Nutzer/die Nutzerin weiß, was Open Source Software ist.
+	       
+	       Um im weiteren Verlauf der Umfrage sinnvolle Antworten zu erhalten, wird an dieser Stelle die Definition von Software und von Open Source Software erklärt.
+	       %TODO: Gegebenenfalls werden hier noch weitere Definitionen nach einem Test hinzugefügt.
+	       
+	       %TODO: Warum benutzen Unternehmen OSS für ihre kommerziellen Lösungen. hier Als Antwortmöglichkeiten die der Studie aus der Schweiz angeben, sodass am ende verglichen werden kann.
+	   
+	   \paragraph{Konkrete Fragen}
+	       Im zweiten Abschnitt werden konkrete Beispiele für Open Source Software genannt, um den Nutzer/die Nutzerin  darauf Aufmerksam zu machen, wo überall Open Source Software vorkommt, ohne dass es ihm/ihr aufgefallen ist.
+	       
+	       Dabei wird sowohl nach direkter und indirekter Nutzung gefragt.
+	       
+	   \paragraph{Chancen und Risiken von Open Source Software}
+	       Im dritten Abschnitt werden Fragen zum Thema Chancen und Risiken gestellt. Dazu wir gefragt, warum oder warum nicht Endnutzer oder Unternehmen Open Source Software einsetzten. Die möglichen Antworten werden aus der Schweizer Studie zum Thema Open Source\footcite{oss:studie} genommen, um die Wahrnehmung mit der realen Nutzung zu vergleichen.
+	   \\\par
+	   Um zu analysieren, ob es innerhalb der Bevölkerungen Differenzen gibt, soll die Umfrage eine Frage zur aktuellen Tätigkeit (Schüler, Student, Arbeitnehmer, etc.) und eine Frage zur Selbsteinschätzung der Computerkenntnisse enthalten.
+	   
 	   
 	\section{Struktur}
 	
-	\begin{enumerate}
-	    \item Test
-	    \item Bla
-        \begin{enumerate}
-        	    \item Test
-        	    \item Bla
-        	\end{enumerate}
-	\end{enumerate}
     
     \clearpage
-    \nocite{*}
-    \bibliography{../Bibliography}
+    \printbibliography
 
 \end{document}
