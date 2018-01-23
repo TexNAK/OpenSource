@@ -1,5 +1,4 @@
-\documentclass[a4paper]{report}
-% \documentclass[a4paper]{book}
+\documentclass[a4paper]{article}
 
 % Imports
 \usepackage[utf8]{inputenc}
@@ -15,6 +14,9 @@
 \usepackage{hyperref}
 \usepackage{siunitx}
 \usepackage{tkz-graph}
+\usepackage{natbib}
+
+\bibliographystyle{agsm}
 
 
 \usetikzlibrary{positioning}
@@ -24,7 +26,7 @@
     \noindent\rule[0.25ex]{\linewidth}{0.5pt}
     \large Ein zukunftsweisendes Konzept?
 }
-\author{Til Blechschmidt}
+
 \author{
   Blechschmidt, Til\\
   \texttt{til@blechschmidt.de}
@@ -46,33 +48,23 @@
     % Title page
 	\thispagestyle{fancy}
 	\maketitle
-
-    % Abstract
- 	\begin{abstract}
-         Das folgende Dokument fasst alle Inhalte zusammen, die die Autoren im Laufe des Studiengangs Angewandte Informatik sowie in zusätzlichen Seminaren an der Nordakademie vermittelt bekommen haben.
- 	\end{abstract}
- 	\newpage
-
-	% TOC
-	\tableofcontents
-
-	% --- Vorlesungsinhalte ---
-	\part{Diskrete Mathematik}
-		\chapter{smth}
-			blabla
-
+	\clearpage
+	
+	\section{Einführung}
+	   
+	\section{Struktur}
+	
+	\begin{enumerate}
+	    \item Test
+	    \item Bla
+        \begin{enumerate}
+        	    \item Test
+        	    \item Bla
+        	\end{enumerate}
+	\end{enumerate}
     
     \clearpage
-    \part{Appendix}
-    
-    	\clearpage
-    	\printglossary[type=\acronymtype]
-        \printglossary
-        
-        \clearpage
-        \bibliographystyle{unsrt}
-        \bibliography{references}
-        
-        \listoffigures
+    \nocite{*}
+    \bibliography{../Bibliography}
 
 \end{document}
