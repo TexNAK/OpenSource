@@ -1,4 +1,4 @@
-\documentclass[a4paper]{report}
+\documentclass[a4paper]{article}
 % \documentclass[a4paper]{book}
 
 % Imports
@@ -9,28 +9,32 @@
 \usepackage{epigraph}
 \usepackage{subfiles}
 \usepackage[acronym,toc]{glossaries}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage[style=apa]{biblatex}
 \usepackage{hyperref}
-\usepackage{siunitx}
-\usepackage{tkz-graph}
 
+\bibliography{../Bibliography}
 
-\usetikzlibrary{positioning}
+% Generate the glossary
+\makeglossaries
+
+% \newglossaryentry{oss}{name=OSS, description={Open Source Software}}
+\newacronym{oss}{OSS}{Open Source Software}
 
 % Title page
-\title{Open Source \\
+\title{Open Source Software \\
     \noindent\rule[0.25ex]{\linewidth}{0.5pt}
-    \large Ein zukunftsweisendes Konzept?
+    \large Wie nehmen Endanwender Open Source Software wahr?
 }
 
 \author{
   Blechschmidt, Til\\
-  \texttt{til@blechschmidt.de}
+  \texttt{til@blechschmidt.de}\\
+  Nordakademie, Elmshorn
   \and
   Peeters, Noah\\
-  \texttt{noah.peeters@icloud.com}
+  \texttt{noah.peeters@icloud.com}\\
+  Nordakademie, Elmshorn
 }
 
 % Numbering
@@ -44,34 +48,43 @@
 
 \begin{document}
     % Title page
-	\thispagestyle{fancy}
-	\maketitle
+    \thispagestyle{fancy}
+    \maketitle
 
     % Abstract
- 	\begin{abstract}
-         Das folgende Dokument fasst alle Inhalte zusammen, die die Autoren im Laufe des Studiengangs Angewandte Informatik sowie in zusätzlichen Seminaren an der Nordakademie vermittelt bekommen haben.
- 	\end{abstract}
- 	\newpage
+    \begin{abstract}
+         OSS Abstract
+    \end{abstract}
+    \newpage
 
-	% TOC
-	\tableofcontents
+    % TOC
+    \tableofcontents
+    \clearpage
 
-	% --- Vorlesungsinhalte ---
-	\part{Diskrete Mathematik}
-		\chapter{Test}
-			In diesem Kapitel wird ein tolles Thema behandelt.
-
+    % --- Content ---
+    \section{Einführung}
+        \subsection{Open Source Software}
+            \subsubsection{Definition}
+                \begin{quote} 
+                    \centering 
+                    Software wird als Open Source bezeichnet, wenn ihr Quelltext frei zugänglich ist. Sie kann in kommerzieller Software eingesetzt werden, ihre Nutzung muss allerdings nicht kostenfrei sein. 
+                \end{quote}
+        
+    \section{Umfrageauswertung}
+        \subsection{Test}
+            \gls{oss} und \gls{oss}
+    
+    \section{Zusammenfassung}
     
     \clearpage
-    \part{Appendix}
+    \section*{Appendix}
     
-    	\clearpage
-    	\printglossary[type=\acronymtype]
+        \printglossary[type=\acronymtype]
         \printglossary
         
         \clearpage
-        \bibliographystyle{unsrt}
-        \bibliography{references}
+        \nocite{*}
+        \printbibliography
         
         \listoffigures
 
