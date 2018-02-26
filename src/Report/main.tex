@@ -11,6 +11,7 @@
 \usepackage[acronym,toc]{glossaries}
 \usepackage{graphicx}
 \usepackage[style=apa]{biblatex}
+\usepackage{pdfpages}
 \usepackage{hyperref}
 
 \bibliography{../Bibliography}
@@ -90,7 +91,9 @@
                 \begin{itemize}
                     \item Entwicklerwerkzeuge wie Compiler
                     \item Datenbanken wie MySQL
+                    \item ... % TODO: gibt es mehr? Apache Web server?
                 \end{itemize}
+                Der Grund dafür liegt in der Verbreitung dieser Komponenten. % TODO: bessere Erklärung
                 
                 Beispiele für Indirekte Nutzung:
                 \begin{itemize}
@@ -99,8 +102,10 @@
                     \item ... % TODO: mehr Beispiele
                 \end{itemize}
         
-    \section{Umfrageauswertung}
-        \subsection{Test}
+    \section{Umfrage}
+        \subsection{Aufbau}
+            
+        \subsection{Auswertung}
     
     \section{Zusammenfassung}
     
@@ -113,5 +118,7 @@
         \clearpage
         \nocite{*}
         \printbibliography
+        
+        \includepdf[pages={-}]{assets/Umfrage.pdf}
 
 \end{document}
