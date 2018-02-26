@@ -8,10 +8,11 @@
 \usepackage{fancyhdr}
 \usepackage{epigraph}
 \usepackage{subfiles}
-\usepackage[acronym,toc]{glossaries}
+\usepackage[acronym]{glossaries}
 \usepackage{graphicx}
 \usepackage[style=apa]{biblatex}
 \usepackage{pdfpages}
+\usepackage{attachfile2}
 \usepackage{hyperref}
 
 \bibliography{../Bibliography}
@@ -103,15 +104,42 @@
                 \end{itemize}
         
     \section{Umfrage}
-        \subsection{Aufbau}
+		Zweck der Befragung ist es, einen repräsentativen Überblick über die Wahrnehmung von Open Source Software des Endanwenders zu erhalten. Dabei soll Aufschluss über die Verteilung von indirekter sowie direkter Nutzung gegeben werden und in dem Zusammenhang analysiert werden, warum sich Anwender für Open Source Software entscheiden. Außerdem soll evaluiert werden, welche Gründe die Nutzer für und gegen die Nutzung von Open Source Software sehen.
+	
+		\subsection{Inhalt der Umfrage}
+			Die Erhebung ist in vier Teile gegliedert, die im Folgenden näher erläutert sind: 
+		   
+			\paragraph{Bewusste Nutzung}
+				Um die, dem Anwender bewusste, Nutzung von Open Source Software zu erheben, beginnt die Umfrage mit diesem Abschnitt.\\
+				Zunächst wird ermittelt, ob die Nutzer wissen, was Open Source Software ist. Um im weiteren Verlauf der Umfrage sinnvolle Antworten zu erhalten, wird anschließend die Definition von Software sowie quelloffener Software erklärt.\\
+				Nun werden Fragen zum Nutzungsverhalten von solcher Software gestellt ohne dabei Beispiele zu nennen, um Beeinflussung zu vermeiden.
+			
+			\paragraph{Unbewusste Nutzung}
+				Im zweiten Abschnitt werden konkrete Beispiele für Open Source Software genannt, um die Nutzer darauf aufmerksam zu machen, wo Open Source Komponenten und Softwares überall eingesetzt werden, ohne dass es ihnen klar ist.\\
+				Außerdem soll geklärt werden, warum es Differenzen, wenn vorhanden, zwischen bewusster und unbewusster Nutzung gibt.
+			
+			\paragraph{Gründe für und gegen Open Source Software}
+				Im dritten Abschnitt werden Fragen bezüglich der Nutzungs- und Hinderungsgründe von Open Source Software gestellt. Dazu wird gefragt, warum oder warum nicht Endnutzer oder Unternehmen Open Source Software einsetzten. Die möglichen Antworten werden aus der Schweizer Studie zum Thema Open Source\footcite{oss:studie} genommen, um die Wahrnehmung mit der realen Nutzung vergleichbar zu machen.
+			
+			\paragraph{Demografische Differenzen}
+				Zur Analyse von Differenzen innerhalb der Bevölkerungen enthält die Umfrage Fragen zur aktuellen Tätigkeit\footnote{Schüler, Student, Arbeitnehmer, etc.}, dem Geschlecht sowie zur Selbsteinschätzung der Computerkenntnisse.
+				
+		\subsection{Verbreitung}
+			Um die Reichweite der Umfrage zu maximieren und die Kosten zu minimieren wird diese in Form einer Onlinebefragung umgesetzt. Dabei werden Kanäle wie Social Media, E-Mail, Messenger genutzt, um auf die Umfrage aufmerksam zu machen. Zudem wird der Link zu der Umfrage über private Kontakte in Schulen und an der Nordakademie verbreitet.
+     
+    \section{Wissen über OSS}
+        Das Wissen über Open Source Software bei Endanwendern ...
             
-        \subsection{Auswertung}
+    \section{Nutzung von OSS}
+        Die Nutzung von OSS bei Endanwendern
+    
+    \section{Gründe für Open Source Software}
+        Die Gründe für die Nutzung von Open Source Software aus Sicht der Endanwender
     
     \section{Zusammenfassung}
     
     \clearpage
-    \section*{Appendix}
-    
+    \section{Appendix}
         \printglossary[type=\acronymtype]
         \printglossary
         
@@ -119,6 +147,13 @@
         \nocite{*}
         \printbibliography
         
-        \includepdf[pages={-}]{assets/Umfrage.pdf}
+        \clearpage
+        
+        \subsection{Umfrage}
+            \paragraph{Ergebnisse}
+                Die Ergebnisse der Umfrage liegen als CSV-Datei bei und sind auch in dieses PDF eingebunden: \attachfile{assets/OpenSource.csv}
+            \paragraph{Fragebogen}
+                Auf den nächsten vier Seiten befindet sich eine PDF-Version des Fragebogens, wie er Online verbreitet wurde.
+                \includepdf[pages={-}]{assets/Umfrage.pdf}
 
 \end{document}
