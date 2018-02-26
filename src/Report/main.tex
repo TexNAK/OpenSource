@@ -18,9 +18,6 @@
 % Generate the glossary
 \makeglossaries
 
-% \newglossaryentry{oss}{name=OSS, description={Open Source Software}}
-\newacronym{oss}{OSS}{Open Source Software}
-
 % Title page
 \title{Open Source Software \\
     \noindent\rule[0.25ex]{\linewidth}{0.5pt}
@@ -45,6 +42,10 @@
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{0pt}
 
+% Glossery
+% \newglossaryentry{oss}{name=OSS, description={Open Source Software}}
+\newacronym{oss}{OSS}{Open Source Software}
+
 
 \begin{document}
     % Title page
@@ -53,7 +54,7 @@
 
     % Abstract
     \begin{abstract}
-         OSS Abstract
+         \gls{oss} wird in vielen Bereichen eingesetzt. In dieser Arbeit wird analysiert, wie Endanwender \gls{oss} wahrnehmen.
     \end{abstract}
     \newpage
 
@@ -69,6 +70,34 @@
                     \centering 
                     Software wird als Open Source bezeichnet, wenn ihr Quelltext frei zugänglich ist. Sie kann in kommerzieller Software eingesetzt werden, ihre Nutzung muss allerdings nicht kostenfrei sein. 
                 \end{quote}
+                
+        \subsection{Nutzung von Open Source Software}
+            Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterschieden werden.
+            
+            \paragraph{Direkte Nutzung}
+                Zum einen gibt es die direkte Nutzung, bei der der Nutzer eine Software verwendet, die Open Source ist, also dessen Source Code frei zugänglich ist.
+                
+                Beispiele für Direkte Nutzung:
+                \begin{itemize}
+                    \item Wikipedia\footnote{Wikipedia ist eine Konfiguration von Wikimedia, dessen Source Code frei zugänglich ist (\url{https://www.mediawiki.org/wiki/Download}).}
+                    \item Thunderbird
+                    \item ... % TODO: mehr Beispiele
+                \end{itemize}
+                
+            \paragraph{Indirekte Nutzung}
+                Zum anderen gibt es die indirekte Nutzung. Hier verwendet der Nutzer Software, dessen Source Code nicht frei zugänglich ist, deren Funktionalität aber entscheidend von \gls{oss} Komponenten abhängt. Ohne diese Komponenten wäre die Funktionalität stark eingeschränkt. Hierbei werden folgende Komponenten \textbf{nicht} berücksichtigt:
+                
+                \begin{itemize}
+                    \item Entwicklerwerkzeuge wie Compiler
+                    \item Datenbanken wie MySQL
+                \end{itemize}
+                
+                Beispiele für Indirekte Nutzung:
+                \begin{itemize}
+                    \item Google Chrome
+                    \item macOS
+                    \item ... % TODO: mehr Beispiele
+                \end{itemize}
         
     \section{Umfrageauswertung}
         \subsection{Test}
