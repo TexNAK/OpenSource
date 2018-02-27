@@ -8,6 +8,29 @@
 
 import Foundation
 
+// MARK: - Gründe für private Nutzung: Categories
+
+func privateReasonsCategories() {
+    var a: [String: [String]] = [:]
+    Array(categoriesPrivateReasons).forEach { categoyMap in
+        a[categoyMap.value, default: []] += [categoyMap.key]
+    }
+
+    let categories = Array(a).sorted {
+        $0.key < $1.key
+    }.map {
+        ($0.key, $0.value.joined(separator: ", "))
+    }
+
+    print("\\begin{table}[h]\\begin{tabularx}{\\textwidth}{rX}")
+    print("Kategorie & Begriffe \\\\")
+    print("\\hline")
+    for category in categories {
+        print("\(category.0) & \\tiny \(category.1)\\\\")
+    }
+    print("\\end{tabularx}\\end{table}")
+}
+
 // MARK: - Gründe für private Nutzung
 func test(rows: [[String]]) {
     let filteredRows = rows//.filter {
@@ -19,8 +42,8 @@ func test(rows: [[String]]) {
         }
     }
 
-    let gründePrivatCount = gründePrivat.reduce(into: [:]) {
-        counts, word in counts[gründePrivatCategories[word] ?? word, default: 0] += 1
+    let gründePrivatCount = gründePrivat.reduce(into: [:]) { counts, word in
+        counts[categoriesPrivateReasons[word]!, default: 0] += 1
     }
 
     let gründePrivatCountSorted = Array(gründePrivatCount).sorted {
@@ -31,4 +54,6 @@ func test(rows: [[String]]) {
         "\($0.key),\($0.value)"
         }.joined(separator: "\n"))
 }
+
+
 

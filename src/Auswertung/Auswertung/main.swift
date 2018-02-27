@@ -19,11 +19,13 @@ guard CommandLine.arguments.count == 2 else {
 
 guard let inputString = try? String(contentsOf: URL(fileURLWithPath: CommandLine.arguments[1])) else {
     printHelp()
+    print("Cannot open \"\(CommandLine.arguments[1])\"")
     exit(1)
 }
 
 let csv = CSwiftV(with: inputString)
 let rows = csv.rows
 
-test(rows: rows)
+//test(rows: rows)
+privateReasonsCategories()
 
