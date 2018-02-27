@@ -13,6 +13,7 @@
 \usepackage{subfiles}
 \usepackage[acronym]{glossaries}
 \usepackage{graphicx}
+\usepackage{lipsum}
 \usepackage[style=apa]{biblatex}
 \usepackage{pdfpages}
 \usepackage{attachfile2}
@@ -65,6 +66,8 @@
 
     % TOC
     \tableofcontents
+    \listoffigures
+    \listoftables
     \clearpage
 
     % --- Content ---
@@ -158,6 +161,10 @@
             Betrachtung der 
     
         \subsection{Wissen über OSS}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudging}
+                \caption{Attribut Open Source  |  unbeeinflusste Nutzereinschätzung}
+            \end{figure}
             Das Wissen über Open Source Software bei Endanwendern ...
             
         \subsection{Nutzung von OSS}
@@ -212,7 +219,7 @@
         
         \subsection{Umfrage}
             \paragraph{Ergebnisse}
-                Die Ergebnisse der Umfrage liegen als CSV-Datei bei und sind auch in dieses PDF eingebunden: \attachfile{assets/OpenSource.csv}
+                Die Ergebnisse der Umfrage liegen als CSV-Datei bei und sind auch in dieses PDF eingebunden: \attachfile{assets/Open Source.csv}
             \paragraph{Fragebogen}
                 Auf den nächsten vier Seiten befindet sich eine PDF-Version des Fragebogens, wie er Online verbreitet wurde.
                 \includepdf[pages={-}]{assets/Umfrage.pdf}
