@@ -25,5 +25,4 @@ guard let inputString = try? String(contentsOf: URL(fileURLWithPath: CommandLine
 let csv = CSwiftV(with: inputString)
 let rows = csv.rows
 
-test(rows: rows)
-
+usesOSSOverview(rows: rows)
