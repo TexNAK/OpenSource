@@ -68,73 +68,98 @@
     \clearpage
 
     % --- Content ---
-    \section{Einführung}
-        \subsection{Open Source Software}
-            \subsubsection{Definition}
+    
+                    
+    \section{Fragestellung}
+        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium bzw. WebKit als Basis von Google Chrome\footcite{is:open:source:right:for:you} aber auch als Werkzeug wie Linux als Betriebssystem für Server\footcite{report:BaselineScenario}.
+		
+		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\footcite{oss:lotus-to-linux}.
+		
+		Um zuverlässige Daten zu erhalten, die die aktuelle Wahrnehmung der Endanwender widerspiegeln, wird eine Umfrage durchgeführt. Für die Sicherstellung der Repräsentativität der Umfrage werden mindestens 80 Antworten erwartet.
+		Die Umfrage wird quantitativ mit geschlossenen Fragen gestaltet, um den Aufwand für die Befragten zu minimieren und damit die Teilnehmerrate und Datenmenge zu maximieren. % TODO: Cite
+		
+		\subsection{Definitionen} % TODO: Achtung Reihenfolge Definitionen/Fragestellung
+            \subsubsection{Open Source Software}
                 \begin{quote} 
                     \centering 
                     Software wird als Open Source bezeichnet, wenn ihr Quelltext frei zugänglich ist. Sie kann in kommerzieller Software eingesetzt werden, ihre Nutzung muss allerdings nicht kostenfrei sein. 
                 \end{quote}
                 
-        \subsection{Nutzung von Open Source Software}
-            Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterschieden werden.
+            \subsubsection{Nutzung von Open Source Software}
+                Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterschieden werden.
+                
+                \paragraph{Direkte Nutzung}
+                    Zum einen gibt es die direkte Nutzung, bei der der Nutzer eine Software verwendet, die Open Source ist, also dessen Source Code frei zugänglich ist.
+                    
+                    Beispiele für Direkte Nutzung:
+                    \begin{itemize}
+                        \item Wikipedia\footnote{Wikipedia ist eine Konfiguration von Wikimedia, dessen Source Code frei zugänglich ist (\fullcite{wikimedia:download}).}
+                        \item Thunderbird\footnote{\fullcite{thunderbird:faq}}
+                        \item ... % TODO: mehr Beispiele
+                    \end{itemize}
+                    
+                \paragraph{Indirekte Nutzung}
+                    Zum anderen gibt es die indirekte Nutzung. Hier verwendet der Nutzer Software, dessen Source Code nicht frei zugänglich ist, deren Funktionalität aber entscheidend von \gls{oss} Komponenten abhängt. Ohne diese Komponenten wäre die Funktionalität stark eingeschränkt. Hierbei werden folgende Komponenten \textbf{nicht} berücksichtigt:
+                    
+                    \begin{itemize}
+                        \item Entwicklerwerkzeuge wie Compiler
+                        \item Datenbanken wie MySQL
+                        \item Betriebssysteme wie Linux 
+                        \item ... % TODO: gibt es mehr? Apache Web server?
+                    \end{itemize}
+                    Der Grund dafür liegt in der Verbreitung dieser Komponenten. % TODO: bessere Erklärung
+                    
+                    Beispiele für Indirekte Nutzung:
+                    \begin{itemize}
+                        \item Google Chrome\footnote{\fullcite{chromium:homepage}}
+                        \item macOS\footnote{\fullcite{apple:oss}}
+                        \item ... % TODO: mehr Beispiele
+                    \end{itemize}
+
             
-            \paragraph{Direkte Nutzung}
-                Zum einen gibt es die direkte Nutzung, bei der der Nutzer eine Software verwendet, die Open Source ist, also dessen Source Code frei zugänglich ist.
-                
-                Beispiele für Direkte Nutzung:
-                \begin{itemize}
-                    \item Wikipedia\footnote{Wikipedia ist eine Konfiguration von Wikimedia, dessen Source Code frei zugänglich ist (\fullcite{wikimedia:download}).}
-                    \item Thunderbird\footnote{\fullcite{thunderbird:faq}}
-                    \item ... % TODO: mehr Beispiele
-                \end{itemize}
-                
-            \paragraph{Indirekte Nutzung}
-                Zum anderen gibt es die indirekte Nutzung. Hier verwendet der Nutzer Software, dessen Source Code nicht frei zugänglich ist, deren Funktionalität aber entscheidend von \gls{oss} Komponenten abhängt. Ohne diese Komponenten wäre die Funktionalität stark eingeschränkt. Hierbei werden folgende Komponenten \textbf{nicht} berücksichtigt:
-                
-                \begin{itemize}
-                    \item Entwicklerwerkzeuge wie Compiler
-                    \item Datenbanken wie MySQL
-                    \item Betriebssysteme wie Linux 
-                    \item ... % TODO: gibt es mehr? Apache Web server?
-                \end{itemize}
-                Der Grund dafür liegt in der Verbreitung dieser Komponenten. % TODO: bessere Erklärung
-                
-                Beispiele für Indirekte Nutzung:
-                \begin{itemize}
-                    \item Google Chrome\footnote{\fullcite{chromium:homepage}}
-                    \item macOS\footnote{\fullcite{apple:oss}}
-                    \item ... % TODO: mehr Beispiele
-                \end{itemize}
         
-    \section{Umfrage}
+    \section{Design und Durchführung}
 		Zweck der Befragung ist es, einen repräsentativen Überblick über die Wahrnehmung von Open Source Software des Endanwenders zu erhalten. Dabei soll Aufschluss über die Verteilung von indirekter sowie direkter Nutzung gegeben werden und in dem Zusammenhang analysiert werden, warum sich Anwender für Open Source Software entscheiden. Außerdem soll evaluiert werden, welche Gründe die Nutzer für und gegen die Nutzung von Open Source Software sehen.
 	
-		\subsection{Inhalt der Umfrage}
-			Die Erhebung ist in vier Teile gegliedert, die im Folgenden näher erläutert sind: 
-		   
-			\paragraph{Bewusste Nutzung}
-				Um die, dem Anwender bewusste, Nutzung von Open Source Software zu erheben, beginnt die Umfrage mit diesem Abschnitt.\\
-				Zunächst wird ermittelt, ob die Nutzer wissen, was Open Source Software ist. Um im weiteren Verlauf der Umfrage sinnvolle Antworten zu erhalten, wird anschließend die Definition von Software sowie quelloffener Software erklärt.\\
-				Nun werden Fragen zum Nutzungsverhalten von solcher Software gestellt ohne dabei Beispiele zu nennen, um Beeinflussung zu vermeiden.
-			
-			\paragraph{Unbewusste Nutzung}
-				Im zweiten Abschnitt werden konkrete Beispiele für Open Source Software genannt, um die Nutzer darauf aufmerksam zu machen, wo Open Source Komponenten und Softwares überall eingesetzt werden, ohne dass es ihnen klar ist.\\
-				Außerdem soll geklärt werden, warum es Differenzen, wenn vorhanden, zwischen bewusster und unbewusster Nutzung gibt.
-			
-			\paragraph{Gründe für und gegen Open Source Software}
-				Im dritten Abschnitt werden Fragen bezüglich der Nutzungs- und Hinderungsgründe von Open Source Software gestellt. Dazu wird gefragt, warum oder warum nicht Endnutzer oder Unternehmen Open Source Software einsetzten. Die möglichen Antworten werden aus der Schweizer Studie zum Thema Open Source\footcite{oss:studie} genommen, um die Wahrnehmung mit der realen Nutzung vergleichbar zu machen.
-			
-			\paragraph{Demographische Differenzen}
-				Zur Analyse von Differenzen innerhalb der Bevölkerungen enthält die Umfrage Fragen zur aktuellen Tätigkeit\footnote{Schüler, Student, Arbeitnehmer, etc.}, dem Geschlecht sowie zur Selbsteinschätzung der Computerkenntnisse.
+		\subsection{Design}
+		  \subsubsection{Aufbau}
+    			Die Erhebung ist in vier Teile gegliedert, die im Folgenden näher erläutert sind: 
+    		   
+    			\paragraph{Bewusste Nutzung}
+    				Um die, dem Anwender bewusste, Nutzung von Open Source Software zu erheben, beginnt die Umfrage mit diesem Abschnitt.\\
+    				Zunächst wird ermittelt, ob die Nutzer wissen, was Open Source Software ist. Um im weiteren Verlauf der Umfrage sinnvolle Antworten zu erhalten, wird anschließend die Definition von Software sowie quelloffener Software erklärt.\\
+    				Nun werden Fragen zum Nutzungsverhalten von solcher Software gestellt ohne dabei Beispiele zu nennen, um Beeinflussung zu vermeiden.
+    			
+    			\paragraph{Unbewusste Nutzung}
+    				Im zweiten Abschnitt werden konkrete Beispiele für Open Source Software genannt, um die Nutzer darauf aufmerksam zu machen, wo Open Source Komponenten und Softwares überall eingesetzt werden, ohne dass es ihnen klar ist.\\
+    				Außerdem soll geklärt werden, warum es Differenzen, wenn vorhanden, zwischen bewusster und unbewusster Nutzung gibt.
+    			
+    			\paragraph{Gründe für und gegen Open Source Software}
+    				Im dritten Abschnitt werden Fragen bezüglich der Nutzungs- und Hinderungsgründe von Open Source Software gestellt. Dazu wird gefragt, warum oder warum nicht Endnutzer oder Unternehmen Open Source Software einsetzten. Die möglichen Antworten werden aus der Schweizer Studie zum Thema Open Source\footcite{oss:studie} genommen, um die Wahrnehmung mit der realen Nutzung vergleichbar zu machen.
+    			
+    			\paragraph{Demographische Differenzen}
+    				Zur Analyse von Differenzen innerhalb der Bevölkerungen enthält die Umfrage Fragen zur aktuellen Tätigkeit\footnote{Schüler, Student, Arbeitnehmer, etc.} sowie zur Selbsteinschätzung der Computerkenntnisse.
 				
-		\subsection{Verbreitung}
-			Um die Reichweite der Umfrage zu maximieren und die Kosten zu minimieren wird diese in Form einer Onlinebefragung umgesetzt. Dabei werden Kanäle wie Social Media, E-Mail, Messenger genutzt, um auf die Umfrage aufmerksam zu machen. Zudem wird der Link zu der Umfrage über private Kontakte in Schulen und an der Nordakademie verbreitet.
-     
+			\subsubsection{Designentscheidungen}
+			 \begin{itemize}
+			     \item Es wurde überwiegend auf Freifelder verzichtet, um die Auswertung zu vereinfachen. Deshalb wurde bei dem eingesetzten Freifeld ein einheitliches Format gefordert.
+				\item Bei Skalen wurde darauf geachtet eine gerade Anzahl an Optionen anzubieten, um den Nutzer nicht die Möglichkeit zu bieten neutral zu antworten.
+				\item Die Texte sollen möglichst allgemeinverständlich geschrieben sein, um auch Nutzern ohne technischen Hintergrund die Teilnahme an der Umfrage zu ermöglichen.
+			 \end{itemize}
+			     
+		\subsection{Durchführung}
+            \subsubsection{Verbreitung}
+                Um die Reichweite der Umfrage zu maximieren und die Kosten zu minimieren wurde diese in Form einer Onlinebefragung umgesetzt. Dabei wurden Kanäle wie Social Media, E-Mail, Messenger genutzt, um auf die Umfrage aufmerksam zu machen. Zudem wurde der Link zu der Umfrage über private Kontakte und an der Nordakademie verbreitet.
+                
     \section{Auswertung}
+        \subsection{Vorgehen}
+            Die Eingaben in das Freifeld mit den Gründen für die Nutzung von Software, wurden zunächst kategorisiert, um ...
+            
+            Betrachtung der 
+    
         \subsection{Wissen über OSS}
             Das Wissen über Open Source Software bei Endanwendern ...
-                
+            
         \subsection{Nutzung von OSS}
             Die Nutzung von OSS bei Endanwendern
         
@@ -143,6 +168,7 @@
     
     \section{Zusammenfassung}
     
+    \clearpage
     \section{Eidesstaatliche Erklärung}
         Hiermit erklären wir, dass wir die vorliegende Hausarbeit selbstständig verfasst und keine anderen als die angegebenen Hilfsmittel benutzt haben.\\
         Die Stellen der Hausarbeit, die andere Quellen im Wortlaut oder dem Sinn nach entnommen wurden, sind durch Angabe der Herkunft kenntlich gemacht. Dies gilt auch für Zeichnungen, Skizzen, bildliche Darstellungen sowie für Quellen aus dem Internet.
@@ -171,9 +197,18 @@
         \printglossary
         
         \clearpage
+        \nocite{*}
         \printbibliography
         
         \clearpage
+        
+        \subsection{Abschnitte}
+            \begin{tabular}{rl}
+              Abschnitt & Autor \\
+              \hline
+              Bla & N. Peeters\\
+              Bla & T. Blechschmidt
+            \end{tabular}
         
         \subsection{Umfrage}
             \paragraph{Ergebnisse}
