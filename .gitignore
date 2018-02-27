@@ -1,7 +1,7 @@
 src/Expose/*.pdf
 src/Report/*.pdf
 
-# Created by https://www.gitignore.io/api/tex,latex,linux,macos,windows
+# Created by https://www.gitignore.io/api/tex,xcode,latex,swift,linux,macos,windows
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
@@ -269,6 +269,64 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### Swift ###
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+.build/
+
+# CocoaPods - Refactored to standalone file
+
+# Carthage - Refactored to standalone file
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
 ### TeX ###
 ## Core latex/pdflatex auxiliary files:
 
@@ -394,5 +452,23 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### Xcode ###
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-# End of https://www.gitignore.io/api/tex,latex,linux,macos,windows
+## Build generated
+
+## Various settings
+
+## Other
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+
+# End of https://www.gitignore.io/api/tex,xcode,latex,swift,linux,macos,windows
