@@ -88,7 +88,7 @@ struct Games: UsageAndOSSProvider {
 extension Array where Element == String {
     var timestamp: String { return self[0] }
     var vorkenntnisseRichtig: String { return self[1] }
-    var häufig: String { return self[2] }
+    var häufig: Int { return Int(self[2])! }
     var browser: Browser {
         return Browser(
             safari: UsageAndOSS(self[3], true),

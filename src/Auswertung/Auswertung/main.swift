@@ -29,3 +29,5 @@ let rows = csv.rows
 //privateReasons(rows: rows)
 //privateReasonsCategories()
 //usesOSSOverview(rows: rows)
+//knowledgeCorrectniss(rows: rows)
+
