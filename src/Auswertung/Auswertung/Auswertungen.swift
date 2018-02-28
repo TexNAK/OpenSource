@@ -24,8 +24,8 @@ func privateReasons(rows: [[String]]) {
         $0.value > $1.value
     }
 
-    print("Wort,Count\n" + gründePrivatCountSorted.map {
-        "\($0.key),\($0.value)"
+    print("Wort,Anteil\n" + gründePrivatCountSorted.map {
+        "\($0.key),\(Double($0.value)/Double(rows.count))"
         }.joined(separator: "\n"))
 }
 
@@ -47,7 +47,7 @@ func privateReasonsCategories() {
     for category in categories {
         print("\(category.0) & \\tiny \(category.1)\\\\")
     }
-    print("\\end{tabularx}\\end{table}")
+    print("\\end{tabularx}\\caption{Zuordnung der Begriffe des Freifeldes zu Kategorien}\\label{table:categories}\\end{table}")
 }
 
 // MARK: - Richtigkeit der Vorkenntnisse
