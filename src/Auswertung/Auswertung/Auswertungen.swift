@@ -75,6 +75,27 @@ func knowledgeCorrectniss(rows: [[String]]) {
     }
 }
 
+// MARK: - Gründe für kommerzielle Nutzung
+func commercialReasoning(rows: [[String]]) {
+    var voteCounts: [String: Int] = [:]
+    rows.forEach() {
+        $0.gründeUnternehmen.split(separator: ";").forEach {
+            voteCounts[String($0), default: 0] += 1
+        }
+    }
+    let sorted = voteCounts.sorted { $0.1 > $1.1 }
+    let percentages = sorted.map {
+        ($0.key, Double($0.value) / Double(rows.count))
+    }
+
+    let x = [["Kategorie", "Nutzer", "Unternehmen"]] + percentages.map {
+        [$0.0, $0.1, 0.0]
+    }
+
+    x.forEach {
+            print($0.map { String(describing: $0) }.joined(separator: ","))
+    }
+}
 
 // MARK: - Richtigkeit der Selbsteinschätzung
 enum ProgramAffiliation {
@@ -142,7 +163,7 @@ func usesOSSOverview(rows: [[String]]) {
     let correctness =
         [["Category", "Using the program", "Usage ignored", "Not using the program"]] +
             zip(zip(zip(correctnessPercentagesUsing, correctnessPercentagesUsageIgnored), correctnessPercentagesNotUsing), categories).map {
-                return [$1, $0.0.0 * 100, $0.0.1 * 100, $0.1 * 100]
+                return [$1, $0.0.0, $0.0.1, $0.1]
     }
 
     correctness.forEach {

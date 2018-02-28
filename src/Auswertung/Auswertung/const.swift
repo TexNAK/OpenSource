@@ -141,6 +141,7 @@ extension Array where Element == String {
     var gründePrivat: String { return self[37] }
     var gründeUnternehmen: String { return self[38] }
     var tätigkeit: String { return self[39] }
+    /// Ranges from 1 - 6
     var pcKentnisse: Int { return Int(self[40])! }
 }
 

@@ -30,4 +30,8 @@ let rows = csv.rows
 //privateReasonsCategories()
 //usesOSSOverview(rows: rows)
 //knowledgeCorrectniss(rows: rows)
+//usesOSSOverview(rows: rows.filter {
+//    $0.pcKentnisse > 4
+//})
+//commercialReasoning(rows: rows)
 
