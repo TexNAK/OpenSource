@@ -26,6 +26,6 @@ guard let inputString = try? String(contentsOf: URL(fileURLWithPath: CommandLine
 let csv = CSwiftV(with: inputString)
 let rows = csv.rows
 
-//test(rows: rows)
+//privateReasons(rows: rows)
 //privateReasonsCategories()
 //usesOSSOverview(rows: rows)

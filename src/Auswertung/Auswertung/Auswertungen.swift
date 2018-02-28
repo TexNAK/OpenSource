@@ -9,11 +9,8 @@
 import Foundation
 
 // MARK: - Gründe für private Nutzung
-func test(rows: [[String]]) {
-    let filteredRows = rows//.filter {
-    //    $0.pcKentnisse != 4
-    //}
-    let gründePrivat = filteredRows.flatMap { (a: [String]) -> [String] in
+func privateReasons(rows: [[String]]) {
+    let gründePrivat = rows.flatMap { (a: [String]) -> [String] in
         return a.gründePrivat.components(separatedBy: ",").map {
             $0.trimmingCharacters(in: CharacterSet(charactersIn: " -")).lowercased()
         }
