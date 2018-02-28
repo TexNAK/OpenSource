@@ -119,7 +119,7 @@ func usesOSSOverview(rows: [[String]]) {
     let correctness =
         [["Category", "Using the program", "Usage ignored", "Not using the program"]] +
             zip(zip(zip(correctnessPercentagesUsing, correctnessPercentagesUsageIgnored), correctnessPercentagesNotUsing), categories).map {
-                return [$1, $0.0.0 * 100, $0.0.1 * 100, $0.1 * 100]
+                return [$1, $0.0.0, $0.0.1, $0.1]
     }
 
     correctness.forEach {

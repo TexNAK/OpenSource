@@ -29,3 +29,7 @@ let rows = csv.rows
 //test(rows: rows)
 //privateReasonsCategories()
 //usesOSSOverview(rows: rows)
+usesOSSOverview(rows: rows.filter {
+    $0.pcKentnisse > 4
+})
+
