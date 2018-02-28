@@ -26,6 +26,9 @@ guard let inputString = try? String(contentsOf: URL(fileURLWithPath: CommandLine
 let csv = CSwiftV(with: inputString)
 let rows = csv.rows
 
+usesOSSStackedOSS(rows: rows.filter {
+    $0.pcKentnisse > 4
+})
 //privateReasons(rows: rows)
 //privateReasonsCategories()
 //usesOSSOverview(rows: rows)

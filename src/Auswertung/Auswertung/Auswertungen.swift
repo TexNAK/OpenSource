@@ -127,14 +127,29 @@ enum ProgramAffiliation {
     case ignore
 }
 
+enum SoftwareToTakeIntoAccount {
+    case OpenSource
+    case Ignore
+    case ClosedSource
+}
+
 extension Int {
     init(_ x: Bool) {
         self = x ? 1 : 0
     }
 }
 
-func reduceToCount(values: [UsageAndOSS], _ affiliation: ProgramAffiliation) -> (Int, Int)? {
+func reduceToCount(values: [UsageAndOSS], _ affiliation: ProgramAffiliation, _ programsToTakeIntoAccount: SoftwareToTakeIntoAccount) -> (Int, Int)? {
     let x = values.reduce((0, 0)) {
+        switch programsToTakeIntoAccount {
+        case .OpenSource:
+            if !$1.isOpenSource { return $0 }
+        case .ClosedSource:
+            if $1.isOpenSource { return $0 }
+        case .Ignore:
+            break
+        }
+
         switch affiliation {
         case .using:
             return ($1.using && $1.isGuessCorrect ? $0.0 + 1 : $0.0, Int($1.using) + $0.1)
@@ -148,13 +163,13 @@ func reduceToCount(values: [UsageAndOSS], _ affiliation: ProgramAffiliation) -> 
     return x.1 == 0 ? nil : x
 }
 
-func usesOSS(rows: [[String]], affiliation: ProgramAffiliation) -> [Double] {
+func usesOSS(rows: [[String]], affiliation: ProgramAffiliation, programsToTakeIntoAccount: SoftwareToTakeIntoAccount = .Ignore) -> ([Double], [(Int, Int)]) {
     let correctnessByCategory: [[(Int, Int)?]] = rows.map {
-        let browser = reduceToCount(values: $0.browser.values, affiliation)
-        let os = reduceToCount(values: $0.os.values, affiliation)
-        let web = reduceToCount(values: $0.webApp.values, affiliation)
-        let desktop = reduceToCount(values: $0.desktopApp.values, affiliation)
-        let games = reduceToCount(values: $0.games.values, affiliation)
+        let browser = reduceToCount(values: $0.browser.values, affiliation, programsToTakeIntoAccount)
+        let os = reduceToCount(values: $0.os.values, affiliation, programsToTakeIntoAccount)
+        let web = reduceToCount(values: $0.webApp.values, affiliation, programsToTakeIntoAccount)
+        let desktop = reduceToCount(values: $0.desktopApp.values, affiliation, programsToTakeIntoAccount)
+        let games = reduceToCount(values: $0.games.values, affiliation, programsToTakeIntoAccount)
 
         return [browser, os, web, desktop, games]
     }
@@ -173,13 +188,17 @@ func usesOSS(rows: [[String]], affiliation: ProgramAffiliation) -> [Double] {
     }
     let accumulatedCorrectnessPercentage = Double(accumulatedCorrectness.0) / Double(accumulatedCorrectness.1)
 
-    return accumulatedCategoryCorrectnessPercentage + [accumulatedCorrectnessPercentage]
+
+    return (
+        accumulatedCategoryCorrectnessPercentage + [accumulatedCorrectnessPercentage],
+        accumulatedCategoryCorrectness + [accumulatedCorrectness]
+    )
 }
 
 func usesOSSOverview(rows: [[String]]) {
-    let correctnessPercentagesUsing = usesOSS(rows: rows, affiliation: .using)
-    let correctnessPercentagesUsageIgnored = usesOSS(rows: rows, affiliation: .ignore)
-    let correctnessPercentagesNotUsing = usesOSS(rows: rows, affiliation: .notUsing)
+    let correctnessPercentagesUsing = usesOSS(rows: rows, affiliation: .using).0
+    let correctnessPercentagesUsageIgnored = usesOSS(rows: rows, affiliation: .ignore).0
+    let correctnessPercentagesNotUsing = usesOSS(rows: rows, affiliation: .notUsing).0
 
     let categories = ["Browser", "OS", "Web", "Desktop", "Games", "Total"]
 
@@ -194,3 +213,41 @@ func usesOSSOverview(rows: [[String]]) {
     }
 }
 
+func usesOSSStackedOSSAndCSS(rows: [[String]]) {
+    let correctnessUsingOpenSource = usesOSS(rows: rows, affiliation: .using, programsToTakeIntoAccount: .OpenSource).1
+    let correctnessUsingClosedSource = usesOSS(rows: rows, affiliation: .using, programsToTakeIntoAccount: .ClosedSource).1
+
+    let categories = ["Browser", "OS", "Web", "Desktop", "Games", "Total"]
+    let x = zip(correctnessUsingOpenSource, correctnessUsingClosedSource).map { (arg) -> [Double] in
+        let (oss, css) = arg
+        let total = Double(oss.1 + css.1)
+        let ossRight = Double(oss.0) / total
+        let ossWrong = Double(oss.1 - oss.0) / total
+        let cssRight = Double(css.0) / total
+        let cssWrong = Double(css.1 - css.0) / total
+
+        return [ossRight, cssRight, ossWrong, cssWrong]
+    }
+
+    print(["Kategorie", "OSS Richtig", "CSS Richtig", "OSS Falsch", "CSS Falsch"].joined(separator: ","))
+    zip(categories, x).forEach {
+        print("\($0),\($1.map { String($0) }.joined(separator: ","))")
+    }
+}
+
+func usesOSSStackedOSS(rows: [[String]]) {
+    let correctnessUsingOpenSource = usesOSS(rows: rows, affiliation: .using, programsToTakeIntoAccount: .OpenSource).1
+
+    let categories = ["Browser", "OS", "Web", "Desktop", "Games", "Total"]
+    let x = correctnessUsingOpenSource.map { oss -> [Double] in
+        let ossRight = Double(oss.0) / Double(oss.1)
+        let ossWrong = Double(oss.1 - oss.0) / Double(oss.1)
+
+        return [ossRight, ossWrong]
+    }
+
+    print(["Kategorie", "OSS Richtig", "OSS Falsch"].joined(separator: ","))
+    zip(categories, x).forEach {
+        print("\($0),\($1.map { String($0) }.joined(separator: ","))")
+    }
+}
