@@ -75,6 +75,29 @@ func knowledgeCorrectniss(rows: [[String]]) {
     }
 }
 
+func knowledgeCorrectnessByUsageFreq(rows: [[String]]) {
+    print("Vorkenntnisse,Ich kannte den Begriff nicht,Nein,Teilweise,Größtenteils,Ja")
+    for häufig in 1..<5 {
+        let filtered = rows.filter { $0.häufig == häufig }
+
+        let count: [Int] = filtered.reduce([0,0,0,0,0]) {
+            return [
+                $0[0] + Int($1.vorkenntnisseRichtig == "Ja"),
+                $0[1] + Int($1.vorkenntnisseRichtig == "Größtenteils"),
+                $0[2] + Int($1.vorkenntnisseRichtig == "Teilweise"),
+                $0[3] + Int($1.vorkenntnisseRichtig == "Nein"),
+                $0[4] + Int($1.vorkenntnisseRichtig == "Ich kannte den Begriff nicht")
+            ]
+        }
+
+        let mapped = count.map {
+            String(Double($0)/Double(filtered.count))
+            }.reversed().joined(separator: ",")
+
+        print("\(häufig),\(mapped)")
+    }
+}
+
 // MARK: - Gründe für kommerzielle Nutzung
 func commercialReasoning(rows: [[String]]) {
     var voteCounts: [String: Int] = [:]
