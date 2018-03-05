@@ -120,6 +120,89 @@ func commercialReasoning(rows: [[String]]) {
     }
 }
 
+// MARK: - Vergleich private/gewerbliche Gründe
+func privateVsUserCommercial(rows: [[String]]) {
+    let gründePrivat = rows.flatMap { (a: [String]) -> [String] in
+        return a.gründePrivat.components(separatedBy: ",").map {
+            $0.trimmingCharacters(in: CharacterSet(charactersIn: " -")).lowercased()
+        }
+    }
+
+    let gründePrivatCount = gründePrivat.reduce(into: [:]) { counts, word in
+        counts[categoriesPrivateReasons[word]!, default: 0] += 1
+    }
+
+    var privateReasonsInCommercialCategories = privateToCommercialCategories.map() {
+        return ($0.value, gründePrivatCount[$0.key]!)
+    }.sorted {
+        $0.1 > $1.1
+    }
+
+    let otherCount = gründePrivatCount.reduce(0) {
+        if $1.key == "-" { return $0 }
+        return privateToCommercialCategories[$1.key] == nil ? $0 + $1.value : $0
+    }
+
+    privateReasonsInCommercialCategories.append(("Sonstiges", otherCount))
+
+    let commercialUserReasonsList = rows.flatMap {
+        $0.gründeUnternehmen.components(separatedBy: ";")
+    }
+
+    let commercialUserReasons = commercialUserReasonsList.reduce(into: [:]) { counts, word in
+        counts[word, default: 0] += 1
+    }
+
+    let comparisonPercentages = privateReasonsInCommercialCategories.map() {
+        return (
+            $0.0,
+            Double($0.1) / Double(rows.count),
+            Double(commercialUserReasons[$0.0, default: 0]) / Double(rows.count)
+        )
+    }
+
+    print("Kategorie,Privat,Gewerblich")
+    comparisonPercentages.forEach {
+        print("\($0.0),\($0.1),\($0.2)")
+    }
+}
+
+func privateVsCommercial(rows: [[String]]) {
+    let gründePrivat = rows.flatMap { (a: [String]) -> [String] in
+        return a.gründePrivat.components(separatedBy: ",").map {
+            $0.trimmingCharacters(in: CharacterSet(charactersIn: " -")).lowercased()
+        }
+    }
+
+    let gründePrivatCount = gründePrivat.reduce(into: [:]) { counts, word in
+        counts[categoriesPrivateReasons[word]!, default: 0] += 1
+    }
+
+    let otherCount = gründePrivatCount.reduce(0) {
+        if $1.key == "-" { return $0 }
+        if privateToCommercialCategories[$1.key] == nil {
+            print(($1.key, $1.value))
+        }
+        return privateToCommercialCategories[$1.key] == nil ? $0 + $1.value : $0
+    }
+
+    var commercialCategoryCount = privateToCommercialCategories.map() {
+        return ($0.value, gründePrivatCount[$0.key]!)
+    }.sorted {
+            $0.1 > $1.1
+    }
+
+    commercialCategoryCount.append(("Sonstiges", otherCount))
+
+    let commercialCategoryPercentage = commercialCategoryCount.map() {
+        return [$0.0, Double($0.1) / Double(rows.count), commercialReasoningPercentages[$0.0, default: 0]]
+    }
+
+    ([["Kategorie", "Nutzer", "Unternehmen"]] + commercialCategoryPercentage).forEach {
+        print($0.map { String(describing: $0) }.joined(separator: ","))
+    }
+}
+
 // MARK: - Richtigkeit der Selbsteinschätzung
 enum ProgramAffiliation {
     case using
@@ -241,9 +324,11 @@ func usesOSSStackedOSS(rows: [[String]]) {
     let categories = ["Browser", "OS", "Web", "Desktop", "Games", "Total"]
     let x = correctnessUsingOpenSource.map { oss -> [Double] in
         let ossRight = Double(oss.0) / Double(oss.1)
+        let ossRightCount = Double(oss.0)
         let ossWrong = Double(oss.1 - oss.0) / Double(oss.1)
+        let ossWrongCount = Double(oss.1 - oss.0)
 
-        return [ossRight, ossWrong]
+        return [ossRight, ossWrong, ossRightCount, ossWrongCount]
     }
 
     print(["Kategorie", "OSS Richtig", "OSS Falsch"].joined(separator: ","))
