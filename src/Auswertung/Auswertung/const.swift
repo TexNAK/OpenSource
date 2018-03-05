@@ -145,6 +145,32 @@ extension Array where Element == String {
     var pcKentnisse: Int { return Int(self[40])! }
 }
 
+let commercialReasoningPercentages = [
+    "Kosteneinsparungen": 0.34,
+    "Anpassbarkeit": 0.215,
+    "Unabhängigkeit": 0.255,
+    "Offene Standards": 0.425,
+    "Transparenz": 0.275,
+    "Community": 0.355,
+    "Innovation": 0.175,
+    "Sicherheit": 0.18,
+    "Mitarbeitende": 0.15,
+    "Stabilität": 0.185
+]
+
+let privateToCommercialCategories = [
+    "Kosten": "Kosteneinsparungen",
+    "Anpassbarkeit": "Anpassbarkeit",
+    "Unabhängigkeit": "Unabhängigkeit",
+    "Grundeinstellung": "Offene Standards",
+    "Transparenz": "Transparenz",
+    "Community": "Community",
+    "Innovation": "Innovation",
+    "Sicherheit": "Sicherheit",
+    "Weiterentwicklung": "Mitarbeitende",
+    "Qualität": "Stabilität"
+]
+
 let categoriesPrivateReasons = [
     "kostenlos": "Kosten",
     "sicherheit": "Sicherheit",
