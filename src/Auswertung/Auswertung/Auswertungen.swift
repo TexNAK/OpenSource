@@ -8,6 +8,35 @@
 
 import Foundation
 
+// MARK: - Validität
+func byKnowledge(rows: [[String]]) {
+    print("Wissensstand,Anzahl,Anteil")
+    for x in 1...6 {
+        let count = Double(rows.filter {
+            $0.pcKentnisse == x
+            }.count)
+        let perc = count / 119.0
+
+        print("\(x),\(count),\(perc)")
+    }
+}
+
+func byActivity(rows: [[String]]) {
+    let x: [String: Int] = rows.reduce(into: [:]) { activities, row in
+        let activity = activityMapping[row.tätigkeit] ?? row.tätigkeit
+        activities[activity, default: 0] += 1
+    }
+
+    let sorted = Array(x).sorted {
+        $0.value > $1.value
+    }
+
+    print("Beschäftigung,Anzahl")
+    sorted.forEach {
+        print("\($0.key),\($0.value)")
+    }
+}
+
 // MARK: - Gründe für private Nutzung
 func privateReasons(rows: [[String]]) {
     let gründePrivat = rows.flatMap { (a: [String]) -> [String] in

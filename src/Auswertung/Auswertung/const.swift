@@ -145,6 +145,14 @@ extension Array where Element == String {
     var pcKentnisse: Int { return Int(self[40])! }
 }
 
+let activityMapping = [
+    "Zu alt um es Schüler zu nennen aber rein nach Tätigkeit Schüler": "Schüler",
+    "Dualer Student": "Student",
+    "Dualer Student ": "Student",
+    "Dualstudent": "Student",
+    "Freiberufler": "Arbeitstätig"
+]
+
 let commercialReasoningPercentages = [
     "Kosteneinsparungen": 0.34,
     "Anpassbarkeit": 0.215,

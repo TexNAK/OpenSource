@@ -75,7 +75,7 @@
 		
 		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\cite{oss:lotus-to-linux}.
 		
-		Um zuverlässige Daten zu erhalten, die die aktuelle Wahrnehmung der Endanwender widerspiegeln, wurde eine Umfrage durchgeführt. Für die Sicherstellung der Repräsentativität der Umfrage wurden mindestens 80 Antworten erwartet.
+		Um zuverlässige Daten zu erhalten, die die aktuelle Wahrnehmung der Endanwender widerspiegeln, wurde eine Umfrage durchgeführt. Für die Sicherstellung der Repräsentativität der Umfrage wurden mindestens 80 Antworten erwartet.\label{section:fragestellung:answerAmount}
 		Die Umfrage wurde quantitativ mit geschlossenen Fragen gestaltet, um den Aufwand für die Befragten zu minimieren und damit die Teilnehmerrate und Datenmenge zu maximieren. % TODO: Cite
 		
 		\subsection{Definitionen} % TODO: Achtung Reihenfolge Definitionen/Fragestellung
@@ -219,8 +219,34 @@
             \end{table}
             
         \subsection{Validität der Ergebnisse}
-            - Ausreichender Stichprobenumfang
-            - Stichprobe fokussiert auf Studenten und Arbeitstätige mit guten Computerkenntnissen. Renter und Schüler sowie Leute mit wenigen Computerkenntnissen sind wenig vertreten
+            Der Eingangs auf Seite   \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
+            \subsubsection{Demographische Gruppen}
+                Abbildung \ref{fig:rowsPer:activity} legt dar, dass der Anteil der Schüler nur sehr gering ist und diese Gruppe mit nur acht Teilnehmern nicht repräsentativ ist. Des Weiteren ist zu beachten, dass der Anteil von Personen mit sehr hohen (6) und hohen (5) Computerkenntnissen nach Abbildung \ref{fig:rowsPer:knowledge} einen Großteil der Befragten ausmacht. In Abbildung \ref{fig:rowsPer:knowledgeCite} sind die Werte einer unabhängigen Studie der Österreichische Computer Gesellschaft dargestellt, welche eine weitreichende Übereinstimmung mit der Verteilung der Stichprobe dieser Arbeit haben. Daraus lässt sich
+            
+        \begin{figure}[h]
+            \centering
+            \begin{minipage}{.5\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{assets/results/validity/rowsPerKnowledge}
+                \subcaption{Kenntnisstand}
+                \label{fig:rowsPer:knowledge}
+            \end{minipage}%
+            \begin{minipage}{.5\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{assets/results/validity/knowledgeComparisonCite}
+                \subcaption{Kenntnisstand | Vergleichsstudie}
+                \label{fig:rowsPer:knowledgeCite}
+            \end{minipage}
+            
+            \centering
+            \begin{minipage}{.5\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{assets/results/validity/rowsPerActivity}
+                \subcaption{Beschäftigung}
+                \label{fig:rowsPer:activity}
+            \end{minipage}
+            \caption{Anteile der Stimmen}
+        \end{figure}
 
     \section{Ergebnisse}
         \subsection{Wissen über OSS}
@@ -327,13 +353,11 @@
                 \centering
                 \includegraphics[width=\textwidth]{assets/signature_tilb.png}
                 Til Blechschmidt
-                \label{fig:test1}
             \end{minipage}%
             \begin{minipage}{.5\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{assets/signature_noahp.png}
                 Noah Peeters
-                \label{fig:test2}
             \end{minipage}
         \end{figure}
         \clearpage
