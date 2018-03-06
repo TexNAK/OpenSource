@@ -127,16 +127,16 @@ extension Array where Element == String {
     var games: Games {
         return Games(
             worldOfWarcraft: UsageAndOSS(self[26], false),
-            superhot: UsageAndOSS(self[27], true),
-            firewatch: UsageAndOSS(self[28], true),
+            superhot: UsageAndOSS(self[27], false),
+            firewatch: UsageAndOSS(self[28], false),
             skyrim: UsageAndOSS(self[29], false),
-            counterStrike: UsageAndOSS(self[30], true),
+            counterStrike: UsageAndOSS(self[30], false),
             farCry: UsageAndOSS(self[31], false),
-            subnautica: UsageAndOSS(self[32], true),
+            subnautica: UsageAndOSS(self[32], false),
             assassinsCreed: UsageAndOSS(self[33], false),
-            portal: UsageAndOSS(self[34], true),
+            portal: UsageAndOSS(self[34], false),
             leagueOfLegends: UsageAndOSS(self[35], false),
-            halfLife: UsageAndOSS(self[36], true))
+            halfLife: UsageAndOSS(self[36], false))
     }
     var gründePrivat: String { return self[37] }
     var gründeUnternehmen: String { return self[38] }
