@@ -223,7 +223,7 @@
                     Weiterentwicklung & \tiny weiterentwicklung\\
                     Zufall & \tiny keine gründe, hat keinen speziellen grund, zufall, weil software die ich brauche zufällig open-source ist\\
                 \end{tabularx}
-                \caption{Zuordnung der Begriffe des Freifeldes zu Kategorien}
+                \caption{Zuordnung: Begriffe des Freifeldes zu Kategorien}
                 \label{table:categories}
             \end{table}
             
@@ -247,7 +247,7 @@
                     Qualität & Stabilität
                 \end{tabular}
                 \egroup
-                \caption{Zuordnung | Freifeld $\leftrightarrow$ Schweizer Studie}
+                \caption{Zuordnung: Freifeld Kategorien zu Aspekten der Schweizer Studie}
                 \label{table:privateToCommercialCategories}
             \end{table}
             
@@ -289,21 +289,7 @@
                     Bei der Auswertung wurden nur die Antworten von Nutzern in die Auswertung einbezogen, die auch angegeben haben die Software zu verwendet um sicher zu stellen, dass den Nutzern die Software bekannt ist. Andernfalls würde das Ergebnis verfälscht werden.
                     
             \subsubsection{Auswertung des Diagramms}
-                In dem Graphen wird deutlich, dass das Wissen über \gls{oss} stark von der Kategorie abhängig ist.
-                
-                \paragraph{Positive Abweichung}
-                    Besonders gut haben Desktop Anwendungen ({\scriptsize 18.03\%}) und Betriebsysteme ({\scriptsize 20.14\%}) abgeschnitten.
-                    
-                    Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird und damit auch andere Desktop Betriebssysteme als nicht \gls{oss}.%TODO: Citation needed
-                    
-                    %TODO: Desktop
-                
-                \paragraph{Negative Abweichung}
-                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben, da hier falsches Wissen ({\scriptsize -8.13\%}) vorhanden ist. %TODO ref to table with oss software
-                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung verfollständigen.                    
-                    
-            
-            \subsubsection{Quantitative Betrachtung}
+                In dem Graphen wird deutlich, dass das Wissen über \gls{oss} stark von der Kategorie abhängig ist. %TODO: add more content
             
                 Nimmt man an, dass $r \in \left[0...1\right]$ Prozent der Befragten sicher wussten, dass es sich um \gls{oss} Software handelt, bedeutet dies, dass $d = 1 - r$ Prozent geraten haben. Unter Einbezug des Erwartungswertes von $50\%$ beim Raten erhält man dann als Gesamt-Erwartungswert $\mu$:
             
@@ -316,7 +302,9 @@
                 \end{split}
                 \end{equation}
             
-                Mit dieser so erhaltenen Formel für $r$ lässt sich der reale Anteil der Befragten ermittelt, die in der Lage waren richtig zu beantworten, ob es sich bei Software um \gls{oss} handelt oder sie diese nutzt. Die sich daraus ergebenen Werte für den realen Prozentanteil sind in Tabelle \ref{table:knowledge_by_category} dargestellt. Negative Werte bedeuten dabei wie auch in der vorangegangenen Abbildung \ref{figure:knowledge_difference}, dass falsches Wissen vorhanden ist.
+                Mit dieser so erhaltenen Formel für $r$ lässt sich der reale Anteil der Befragten ermittelt, die in der Lage waren richtig zu beantworten, ob es sich bei einer Anwendung um \gls{oss} handelt oder sie diese nutzt. Die sich daraus ergebenen Werte für den realen Prozentanteil sind in Tabelle \ref{table:knowledge_by_category} dargestellt. Negative Werte bedeuten dabei wie auch in der vorangegangenen Abbildung \ref{figure:knowledge_difference}, dass falsches Wissen vorhanden ist.
+                
+                %TODO: Auswertung
                 
                 \begin{table}
                     \centering
@@ -332,8 +320,18 @@
                     \label{table:knowledge_by_category}
                 \end{table}
                 
-                Ein Signifikanztest 
-
+                \paragraph{Positive Abweichung}
+                    Besonders gut haben Desktop Anwendungen ({\scriptsize 18.03\%}) und Betriebsysteme ({\scriptsize 20.14\%}) abgeschnitten.
+                    
+                    Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird und damit auch andere Desktop Betriebssysteme als nicht \gls{oss}.%TODO: Citation needed
+                    
+                    %TODO: Desktop
+                
+                \paragraph{Negative Abweichung}
+                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:oss}}, da hier falsches Wissen ({\scriptsize -8.13\%}) vorhanden ist.                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung verfollständigen. 
+                    
+                \paragraph{Signifikanz der Abweichung}
+                
                 \begin{table}
                     \centering
                     \begin{tabular}{rccccc}
@@ -344,9 +342,11 @@
                         Desktop & $278$ & $195$ & \tiny{[ 122.3267 ; 155.6733 ]} & \tiny{[ 113.99 ; 164.01 ]} & Hoch\\\hline
                         Gesamt & $827$ & $487$ & \tiny{[ 384.7424 ; 442.2576 ]} & \tiny{[ 370.3636 ; 456.6364 ]} & Hoch
                     \end{tabular}
-                    \caption{Signifikanz der Abweichung vom Erwartungswert $50\%$}
+                    \caption{Signifikanz der Abweichung vom Erwartungswert}
                     \label{table:knowledge_by_category_sigma}
                 \end{table}
+                
+                Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt. Es ist erkennbar, dass in allen Kategorien mindestens eine signifikante Abweichung gegeben ist. Das bedeutet, dass ein Teil der Befragten nicht geraten hat sondern auf Grundlage von Vorwissen, das im Fall von Browsern im Durchschnitt falsch, sonst aber richtig ist, eine Entscheidung gefällt haben.
             
         \subsection{Nutzungsgründe für Open Source Software}
             Im Jahr 2015 führte die Forschungsstelle Digitale Nachhaltigkeit des Instituts für Wirtschaftsinformatik an der Universität Bern eine Befragung von 200 Schweizer Unternehmen durch\cite{oss:studie}. Eins der Ziele der Umfrage war es, ein Ranking der Nutzungsgründe von \gls{oss} für Unternehmen aufzustellen.
