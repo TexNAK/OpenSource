@@ -4,22 +4,18 @@
 % Imports
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
-\usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
 \usepackage{caption}
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{epigraph}
-\usepackage{subfiles}
 \usepackage[acronym]{glossaries}
 \usepackage{graphicx}
-\usepackage[style=apa]{biblatex}
-\usepackage{pdfpages}
-\usepackage{attachfile2}
+%\usepackage{pdfpages}
+%\usepackage{attachfile2}
 \usepackage{tabularx}
+\usepackage{cite}
 \usepackage{hyperref}
-
-\bibliography{./Bibliography}
 
 % Generate the glossary
 \makeglossaries
@@ -48,7 +44,7 @@
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{0pt}
 
-% Glossery
+% Glossary
 % \newglossaryentry{oss}{name=OSS, description={Open Source Software}}
 \newacronym{oss}{OSS}{Open Source Software}
 
@@ -77,7 +73,7 @@
     \section{Fragestellung}
         In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Basis von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}
 		
-		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\footcite{oss:lotus-to-linux}.
+		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\cite{oss:lotus-to-linux}.
 		
 		Um zuverlässige Daten zu erhalten, die die aktuelle Wahrnehmung der Endanwender widerspiegeln, wurde eine Umfrage durchgeführt. Für die Sicherstellung der Repräsentativität der Umfrage wurden mindestens 80 Antworten erwartet.
 		Die Umfrage wurde quantitativ mit geschlossenen Fragen gestaltet, um den Aufwand für die Befragten zu minimieren und damit die Teilnehmerrate und Datenmenge zu maximieren. % TODO: Cite
@@ -97,8 +93,7 @@
                     
                     Beispiele für Direkte Nutzung:
                     \begin{itemize}
-                        \item Wikipedia\footnote{Wikipedia ist eine Konfiguration von Wikimedia, dessen Source Code frei zugänglich ist (\fullcite{wikimedia:download}).}
-                        \item Thunderbird\footnote{\fullcite{thunderbird:faq}}
+                        \item Wikipedia\footnote{Wikipedia ist eine Konfiguration von Wikimedia, dessen Source Code frei zugänglich ist.}                        \item Thunderbird % TODO add reference to table
                         \item ... % TODO: mehr Beispiele
                     \end{itemize}
                     
@@ -109,14 +104,14 @@
                         \item Entwicklerwerkzeuge wie Compiler
                         \item Datenbanken wie MySQL
                         \item Betriebssysteme wie Linux 
-                        \item ... % TODO: gibt es mehr? Apache Web server?
-                    \end{itemize}
+                        \item ... 
+                    \end{itemize} % TODO: gibt es mehr? Apache Web server?
                     Der Grund dafür liegt in der Verbreitung dieser Komponenten. % TODO: bessere Erklärung
                     
                     Beispiele für Indirekte Nutzung:
                     \begin{itemize}
-                        \item Google Chrome\footnote{\fullcite{chromium:homepage}}
-                        \item macOS\footnote{\fullcite{apple:oss}}
+                        \item Google Chrome % TODO add reference to table
+                        \item macOS % TODO add reference to table
                         \item ... % TODO: mehr Beispiele
                     \end{itemize}
 
@@ -139,7 +134,7 @@
     				Außerdem soll geklärt werden, warum es Differenzen, wenn vorhanden, zwischen bewusster und unbewusster Nutzung gibt.
     			
     			\paragraph{Gründe für und gegen Open Source Software}
-    				Im dritten Abschnitt werden Fragen bezüglich der Nutzungs- und Hinderungsgründe von Open Source Software gestellt. Dazu wird gefragt, warum oder warum nicht Endnutzer oder Unternehmen Open Source Software einsetzten. Die möglichen Antworten werden aus der Schweizer Studie zum Thema Open Source\footcite{oss:studie} genommen, um die Wahrnehmung mit der realen Nutzung vergleichbar zu machen.
+    				Im dritten Abschnitt werden Fragen bezüglich der Nutzungs- und Hinderungsgründe von Open Source Software gestellt. Dazu wird gefragt, warum oder warum nicht Endnutzer oder Unternehmen Open Source Software einsetzten. Die möglichen Antworten werden aus der Schweizer Studie zum Thema Open Source\cite{oss:studie} genommen, um die Wahrnehmung mit der realen Nutzung vergleichbar zu machen.
     			
     			\paragraph{Demographische Differenzen}
     				Zur Analyse von Differenzen innerhalb der Bevölkerungen enthält die Umfrage Fragen zur aktuellen Tätigkeit\footnote{Schüler, Student, Arbeitnehmer, etc.} sowie zur Selbsteinschätzung der Computerkenntnisse.
@@ -243,7 +238,7 @@
         \clearpage
         \newpage
         \subsection{Nutzungsgründe für Open Source Software}
-            Im Jahr 2015 führte die Forschungsstelle Digitale Nachhaltigkeit des Instituts für Wirtschaftsinformatik an der Universität Bern eine Befragung von 200 Schweizer Unternehmen durch\footcite{oss:studie}. Ziel war es ein Ranking der wichtigsten Nutzungsgründe von \gls{oss} aufzustellen.
+            Im Jahr 2015 führte die Forschungsstelle Digitale Nachhaltigkeit des Instituts für Wirtschaftsinformatik an der Universität Bern eine Befragung von 200 Schweizer Unternehmen durch\cite{oss:studie}. Ziel war es ein Ranking der wichtigsten Nutzungsgründe von \gls{oss} aufzustellen.
 
             \paragraph{Sicht der Nutzer auf Unternehmen}
                 Um einen Einblick in die Sicht der Nutzer auf Unternehmen zu bekommen wurden die Endanwender im Rahmen dieser Hausarbeit befragt, welches die drei signifikantesten Gründe für den Einsatz von \gls{oss} in Unternehmen sind. Dabei wurden die gleichen Kategorien wie in der Eingangs erwähnten Studie in einer Multiple-Choice Frage abgefragt.
@@ -290,7 +285,7 @@
                     
                     \subparagraph{Sicht der Nutzer auf Unternehmen} Die Antworten der direkten Multiple-Choice Frage bezüglich des Rankings wurden kumuliert und darauf basierend ein Ranking erstellt.
                     
-                    \subparagraph{gewerbliche Nutzung} Das Ranking für die gewerbliche Nutzung wurden Figur 8 auf Seite 16 der Schweizer Studie\footcite{oss:studie} direkt entnommen.
+                    \subparagraph{gewerbliche Nutzung} Das Ranking für die gewerbliche Nutzung wurden Figur 8 auf Seite 16 der Schweizer Studie\cite{oss:studie} direkt entnommen.
             
             \subsubsection{Auswertung des Diagramms}
                 \paragraph{Sicht der Nutzer auf Unternehmen}
@@ -353,7 +348,8 @@
         
         \clearpage
         \nocite{*}
-        \printbibliography
+        \bibliographystyle{unsrt}
+        \bibliography{Bibliography}
         
         \clearpage
         
@@ -365,11 +361,11 @@
               Bla & T. Blechschmidt
             \end{tabular}
         
-        \subsection{Umfrage}
-            \paragraph{Ergebnisse}
-                Die Ergebnisse der Umfrage liegen als CSV-Datei bei und sind auch in dieses PDF eingebunden: \attachfile{assets/Open Source.csv}
-            \paragraph{Fragebogen}
-                Auf den nächsten vier Seiten befindet sich eine PDF-Version des Fragebogens, wie er Online verbreitet wurde.
-                \includepdf[pages={-}]{assets/Umfrage.pdf}
+%        \subsection{Umfrage}
+%            \paragraph{Ergebnisse}
+%                Die Ergebnisse der Umfrage liegen als CSV-Datei bei und sind auch in dieses PDF eingebunden: \attachfile{assets/Open Source.csv}
+%            \paragraph{Fragebogen}
+%                Auf den nächsten vier Seiten befindet sich eine PDF-Version des Fragebogens, wie er Online verbreitet wurde.
+%                \includepdf[pages={-}]{assets/Umfrage.pdf}
 
 \end{document}
