@@ -158,9 +158,9 @@
     \section{Auswertung}
         \subsection{Vorgehen}
             \paragraph{Auswertung des Freifeldes}
-                Um mit den Daten des Freifeldes zu arbeiten, wurden zunächst alle Begriffe, die die Nutzer eingegeben haben, einer Kategorie zugeordnet. Alle Begriffe, denen kein sinnvoller Inhalt zugeordnet werden konnte, wurden in der Kategorie '-' zusammengefasst. Diese Zuordnung ist in der Tabelle \ref{table:categories} auf Seite \pageref{table:categories} dargestellt.
+                Um mit den Daten des Freifeldes zu arbeiten, wurden zunächst alle Begriffe, die die Nutzer eingegeben haben, einer Kategorie zugeordnet. Alle Begriffe, denen kein sinnvoller Inhalt zugeordnet werden konnte, wurden in der Kategorie '-' zusammengefasst. Diese Zuordnung ist in Tabelle \ref{table:categories} dargestellt.
             
-            \begin{table}[h]
+            \begin{table}[!htbp]
                 \begin{tabularx}{\textwidth}{rX}
                     Kategorie & Begriffe \\
                     \hline
@@ -196,7 +196,7 @@
                     Zufall & \tiny keine gründe, hat keinen speziellen grund, zufall, weil software die ich brauche zufällig open-source ist\\
                 \end{tabularx}
                 \caption{Zuordnung der Begriffe des Freifeldes zu Kategorien}
-            \label{table:categories}
+                \label{table:categories}
             \end{table}
             
         \subsection{Validität der Ergebnisse}
@@ -205,16 +205,106 @@
 
     \section{Ergebnisse}
         \subsection{Wissen über OSS}
+            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} von Endnutzern ist, ob diese wissen, ob es sich bei Software um  \gls{oss} handelt pder diese \gls{oss} verwendet.
+            
+            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} sowohl gefragt, welche Softwares aus einer vorgegebenen Liste genutzt wird und welche \gls{oss} sind oder nutzen. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
+            
+                        
             \begin{figure}
-                \includegraphics[width=\textwidth]{assets/results/definition/definition.pdf}
-                \caption{Korrektheit der eigenen Definition nach Selbsteinschätzung geordnet.}
+                \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudgingDetailedOSSOnly2.pdf}
+                \caption{Abweichung des Wissens über \gls{oss} nach Kategorie vom Erwartungswert von $50\%$.}
+                \label{figure:knowledge_difference}
             \end{figure}
-        
-            \begin{figure}
-                \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudging}
-                \caption{Attribut Open Source  |  unbeeinflusste Nutzereinschätzung}
-            \end{figure}
-            Das Wissen über Open Source Software bei Endanwendern ...
+            
+            
+            \subsubsection{Aufbau des Diagramms}
+                \paragraph{Kategorien}
+                    Für die Auswertung wurden die Softwares wie auch schon bei der Umfrage in die Kategorien Browser, Betriebssysteme (OS), Web, Desktop und Spiele gruppiert.
+                    
+                \paragraph{Werte}
+                    Zunächst ist zu betrachten, wie das Ergebnis ausfallen würde, wenn alle Befragten raten würden. In diesem Fall wäre der Erwartungswert $50\%$ der Befragten, da es sich um eine Ja-Nein-Frage, also eine Frage mit nur zwei Möglichkeiten, handelt.
+                    
+                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50\%$ und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
+            
+                    \begin{tabularx}{\textwidth}{rX}
+                        \textbf{Ergebnis} & \textbf{Auswertung} \\\hline
+                        $= 50\%$ & Die Befragten haben haben das selbe Ergebnis erreicht, wie beim Raten. Das bedeutet, dass im Durchschnitt kein Wissen über \gls{oss} vorhanden ist.\\
+                        $> 50\%$ & Ein größerer Teil der Befragten konnten die Frage richtig beantworten. Das bedeutet, dass im Durchschnitt richtiges Wissen über \gls{oss} vorhanden ist. Im Extremfall 100\% konnte jeder der Befragten die Frage richtig beantworten.\\
+                        $< 50\%$ & Ein größter Teil der Befragten hat die Frage falsch beantwortet. Das bedeutet, dass im Durchschnitt falsches Wissen über \gls{oss} vorhanden ist. Im Extremfall 0\% hat keiner der Befragten die Frage richtig beantworten.  
+                    \end{tabularx}
+            
+                \paragraph{Auswahl der Datenpunkte}
+                    Bei der Auswertung wurden nur die Antworten von Nutzern gewertet, die auch angaben die Software zu verwendet um sicher zu stellen, dass den Nutzern die Software bekannt ist. Andernfalls würde das Ergebnis verfälscht werden.
+                    
+            \subsubsection{Auswertung des Diagramms}
+                In dem Graphen wird deutlich, dass das Wissen über \gls{oss} stark von der Kategorie abhängig ist.
+                
+                \paragraph{Positive Abweichung}
+                    Besonders gut haben Desktop Anwendungen ({\scriptsize 18.03\%}) und Betriebsysteme ({\scriptsize 20.14\%}) abgeschnitten.
+                    
+                    Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird und damit auch andere Desktop Betriebssysteme als nicht \gls{oss}.%TODO: Citation needed
+                    
+                    %TODO: Desktop
+                
+                \paragraph{Negative Abweichung}
+                    Bei Browsern ({\scriptsize -8.13\%}) und besonders bei Spielen ({\scriptsize -35.71\%}) ist falsches Wissen vorhanden ist.
+                    
+                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser open source veröffentlicht haben. %TODO ref to table with oss software
+                        %TODO: Wie sieht es mit den oss Browsern aus. Hier auswertung verfollständigen.
+                    
+                    Das negative Ergebnis bei Spiele lässt sich damit erklären, dass nicht bekannt ist, dass viele Spiele auf open source game engines aufbauen %TODO: ref to table with oss software
+                    
+                    Gemeinsam haben die Kategorien, dass sowohl die falsch eingeschätzten Browser als auch die Spiele von großen Unternehmen mit Gewinnabsichten kommen. %TODO citation needed.
+                    Dies führte wahrscheinlich zu der Einschätzung, dass diese keine \gls{oss} verwenden.
+                    
+                    
+            
+            \subsubsection{Quantitative Betrachtung}
+            
+                Nimmt man an, dass $r \in \left[0...1\right]$ Prozent der Befragten sicher wussten, dass es sich um \gls{oss} Software handelt, bedeutet dies, dass $d = 1 - r$ Prozent geraten haben. Unter Einbezug des Erwartungswertes von $50\%$ beim Raten erhält man dann als Gesamt-Erwartungswert $\mu$:
+            
+                \begin{equation}
+                \begin{split}
+                    \mu &= r + \frac{d}{2} \\
+                        &= \frac{2r + 1 - r}{2} \\
+                        &= \frac{r + 1}{2} \\
+                    r   &= 2\mu - 1
+                \end{split}
+                \end{equation}
+            
+                Mit dieser so erhaltenen Formel für $r$ lässt sich der reale Anteil der Befragten ermittelt, die in der Lage waren richtig zu beantworten, ob es sich bei Software um \gls{oss} handelt oder sie diese nutzt. Die sich daraus ergebenen Werte für den realen Prozentanteil sind in Tabelle \ref{table:knowledge_by_category} dargestellt. Negative Werte bedeuten dabei, dass 
+                
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rcccc}
+                        Kategorie & Umfang & Erfolge & Prozent Statistik & Prozent Realität \\\hline\hline
+                        Browser & $246$ & $103$ & $41.87\%$ & $-16.26\%$\\
+                        OS & $122$ & $83$ & $68.03\%$ & $36.07\%$\\
+                        Web & $181$ & $106$ & $58.56\%$ & $17.13\%$\\
+                        Desktop & $278$ & $195$ & $70.14\%$ & $40.29\%$\\
+                        Spiele & $77$ & $11$ & $14.29\%$ & $-71.43\%$\\\hline
+                        Gesamt & $904$ & $498$ & $55.09\%$ & $10.18\%$
+                    \end{tabular}
+                    \caption{Wissen über \gls{oss} nach Kategorien}
+                    \label{table:knowledge_by_category}
+                \end{table}
+                
+                Ein Signifikanztest 
+
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rccccc}
+                        Kategorie & Umfang & Erfolge & 2-Sigma & 3-Sigma & Signifikanz \\\hline\hline
+                        Browser & $246$ & $103$ & \tiny{[ 107.3156 ; 138.6844 ]} & \tiny{[ 99.4734 ; 146.5266 ]} & Signifikant\\
+                        OS & $122$ & $83$ & \tiny{[ 49.9546 ; 72.0454 ]} &  \tiny{[ 44.432 ; 77.568 ]} & Hoch\\
+                        Web & $181$ & $106$ & \tiny{[ 77.0464 ; 103.9536 ]} &  \tiny{[ 70.3196 ; 110.6804 ]} &  Signifikant\\
+                        Desktop & $278$ & $195$ & \tiny{[ 122.3267 ; 155.6733 ]} & \tiny{[ 113.99 ; 164.01 ]} & Hoch\\
+                        Spiele & $77$ & $11$ & \tiny{[ 29.725 ; 47.275 ]} & \tiny{[ 25.3376 ; 51.6624 ]} & Hoch\\\hline
+                        Gesamt & $904$ & $498$ & \tiny{[ 421.9334 ; 482.0666 ]} & \tiny{[ 406.9001 ; 497.0999 ]} & Hoch
+                    \end{tabular}
+                    \caption{Signifikanz der Abweichung vom Erwartungswert $50\%$}
+                    \label{table:knowledge_by_category_sigma}
+                \end{table}
             
         \subsection{Nutzung von OSS}
             Die Nutzung von OSS bei Endanwendern
