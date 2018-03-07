@@ -75,10 +75,7 @@
         In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Basis von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}
 		
 		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\cite{oss:lotus-to-linux}.
-		
-		Um zuverlässige Daten zu erhalten, die die aktuelle Wahrnehmung der Endanwender widerspiegeln, wurde eine Umfrage durchgeführt. Für die Sicherstellung der Repräsentativität der Umfrage wurden mindestens 80 Antworten erwartet.\label{section:fragestellung:answerAmount}
-		Die Umfrage wurde quantitativ mit geschlossenen Fragen gestaltet, um den Aufwand für die Befragten zu minimieren und damit die Teilnehmerrate und Datenmenge zu maximieren. % TODO: Cite
-		
+
 		\subsection{Definitionen} % TODO: Achtung Reihenfolge Definitionen/Fragestellung
             \subsubsection{Open Source Software}
                 \begin{quote} 
@@ -94,8 +91,8 @@
                     
                     Beispiele für Direkte Nutzung:
                     \begin{itemize}
-                        \item Wikipedia\footnote{Wikipedia ist eine Konfiguration von Wikimedia, dessen Source Code frei zugänglich ist.}                        \item Thunderbird % TODO add reference to table
-                        \item ... % TODO: mehr Beispiele
+                        \item Wikipedia
+                        \item Thunderbird % TODO: mehr Beispiele
                     \end{itemize}
                     
                 \paragraph{Indirekte Nutzung}
@@ -105,7 +102,6 @@
                         \item Entwicklerwerkzeuge wie Compiler
                         \item Datenbanken wie MySQL
                         \item Betriebssysteme wie Linux 
-                        \item ... 
                     \end{itemize} % TODO: gibt es mehr? Apache Web server?
                     Der Grund dafür liegt in der Verbreitung dieser Komponenten. % TODO: bessere Erklärung
                     
@@ -113,13 +109,16 @@
                     \begin{itemize}
                         \item Google Chrome % TODO add reference to table
                         \item macOS % TODO add reference to table
-                        \item ... % TODO: mehr Beispiele
                     \end{itemize}
+                    % TODO: mehr Beispiele
 
             
         
     \section{Design und Durchführung}
-		Zweck der Befragung ist es, einen repräsentativen Überblick über die Wahrnehmung von Open Source Software des Endanwenders zu erhalten. Dabei soll Aufschluss über die Verteilung von indirekter sowie direkter Nutzung gegeben werden und in dem Zusammenhang analysiert werden, warum sich Anwender für Open Source Software entscheiden. Außerdem soll evaluiert werden, welche Gründe die Nutzer für und gegen die Nutzung von Open Source Software sehen.
+        Um zuverlässige Daten zu erhalten, die die aktuelle Wahrnehmung der Endanwender widerspiegeln, wurde eine Umfrage durchgeführt. Für die Sicherstellung der Repräsentativität der Umfrage wurden mindestens 80 Antworten erwartet.\label{section:fragestellung:answerAmount}
+		Die Umfrage wurde überwiegend quantitativ mit geschlossenen Fragen gestaltet, um den Aufwand für die Befragten zu minimieren und damit die Teilnehmerrate und Datenmenge zu maximieren.  % TODO: Cite
+    
+		Zweck der Befragung ist es, einen repräsentativen Überblick über die Wahrnehmung von Open Source Software des Endanwenders zu erhalten. Dabei soll Aufschluss über die Verteilung von indirekter und direkter Nutzung gegeben werden. Außerdem soll evaluiert werden, welche Gründe die Nutzer für und gegen die Nutzung von Open Source Software sehen. % TODO: genauer mit der Umfrage abgleichen
 	
 		\subsection{Design}
 		  \subsubsection{Aufbau}
@@ -291,7 +290,7 @@
                         
             \begin{figure}
                 \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudgingDetailedOSSOnly2.pdf}
-                \caption{Abweichung des Wissens über \gls{oss} von $50\%$.}
+                \caption{Abweichung des Wissens über \gls{oss} von $50 \%$.}
                 \label{figure:knowledge_difference}
             \end{figure}
             
@@ -303,13 +302,13 @@
                 \paragraph{Werte}
                     Zunächst ist zu betrachten, wie das Ergebnis ausfallen würde, wenn alle Befragten raten würden. In diesem Fall wäre der Erwartungswert die Hälfte der Befragten, da es sich um eine Ja-Nein-Frage, also eine Frage mit nur zwei Möglichkeiten, handelt.
                     
-                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50\%$ und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
+                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50 \%$ und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
             
                     \begin{tabularx}{\textwidth}{rX}
                         \textbf{Ergebnis} & \textbf{Auswertung} \\\hline
-                        $= 50\%$ & Die Befragten haben haben das selbe Ergebnis erreicht, wie beim Raten. Das bedeutet, dass im Durchschnitt kein Wissen über \gls{oss} vorhanden ist.\\
-                        $> 50\%$ & Ein größerer Teil der Befragten konnten die Frage richtig beantworten. Das bedeutet, dass im Durchschnitt richtiges Wissen über \gls{oss} vorhanden ist. Im Extremfall 100\% konnte jeder der Befragten die Frage richtig beantworten.\\
-                        $< 50\%$ & Ein größerer Teil der Befragten hat die Frage falsch beantwortet. Das bedeutet, dass im Durchschnitt falsches Wissen über \gls{oss} vorhanden ist. Im Extremfall 0\% hat keiner der Befragten die Frage richtig beantworten.  
+                        $= 50 \%$ & Die Befragten haben haben das selbe Ergebnis erreicht, wie beim Raten. Das bedeutet, dass im Durchschnitt kein Wissen über \gls{oss} vorhanden ist.\\
+                        $> 50 \%$ & Ein größerer Teil der Befragten konnten die Frage richtig beantworten. Das bedeutet, dass im Durchschnitt richtiges Wissen über \gls{oss} vorhanden ist. Im Extremfall 100\% konnte jeder der Befragten die Frage richtig beantworten.\\
+                        $< 50 \%$ & Ein größerer Teil der Befragten hat die Frage falsch beantwortet. Das bedeutet, dass im Durchschnitt falsches Wissen über \gls{oss} vorhanden ist. Im Extremfall 0\% hat keiner der Befragten die Frage richtig beantworten.  
                     \end{tabularx}
             
                 \paragraph{Auswahl der Datenpunkte}
@@ -318,7 +317,7 @@
             \subsubsection{Auswertung des Diagramms}
                 In dem Graphen wird deutlich, dass das Wissen über \gls{oss} stark von der Kategorie abhängig ist. %TODO: add more content
             
-                Nimmt man an, dass $r \in \left[0...1\right]$ Prozent der Befragten sicher wussten, dass es sich um \gls{oss} Software handelt, bedeutet dies, dass $d = 1 - r$ Prozent geraten haben. Unter Einbezug des Erwartungswertes von $50\%$ beim Raten erhält man dann als Gesamt-Erwartungswert $\mu$:
+                Nimmt man an, dass $r \in \left[0...1\right]$ Prozent der Befragten sicher wussten, dass es sich um \gls{oss} Software handelt, bedeutet dies, dass $d = 1 - r$ Prozent geraten haben. Unter Einbezug des Erwartungswertes von $50 \%$ beim Raten erhält man dann als Gesamt-Erwartungswert $\mu$:
             
                 \begin{equation}
                 \begin{split}
@@ -440,7 +439,7 @@
                     Des Weiteren ist auffällig, dass die Aspekte \emph{Offene Standards} und \emph{Stabilität} welche sich in Relation zu den privaten Gründen in die richtige Richtung orientieren beide zu schwach eingeschätzt wurden.
                     
                 \paragraph{Projektion privater Gründe}
-                    Schaut man sich die Werte ausserhalb des inneren Fehlerbereichs an, so fällt auf, dass $50\%$ der Punkte ({\scriptsize Community, Anpassbarkeit, Transparenz}) eine sehr geringe Distanz zu den privaten Gründen haben. Daraus lässt sich ableiten, dass die Nutzer möglicherweise ihre privaten Gründe auf Unternehmen projizieren.\\
+                    Schaut man sich die Werte ausserhalb des inneren Fehlerbereichs an, so fällt auf, dass $50 \%$ der Punkte ({\scriptsize Community, Anpassbarkeit, Transparenz}) eine sehr geringe Distanz zu den privaten Gründen haben. Daraus lässt sich ableiten, dass die Nutzer möglicherweise ihre privaten Gründe auf Unternehmen projizieren.\\
                     Betrachtet man ebenfalls die Werte innerhalb des Toleranzbereichs, so findet man weitere Beispiele, welche diese These ({\scriptsize Kosteneinsparungen, Innovation, Mitarbeitende}) unterstreichen. Es lässt sich anhand der vorliegenden Daten allerdings nicht zweifelsfrei beweisen, dass die Punkte lediglich aufgrund der Projektion und nicht aufgrund des Wissens der Nutzer in dem inneren Fehlerbereich liegen.\\
                     Nimmt man alle Datenpunkte die eine maximale Abweichung von zwei zu den privaten Nutzungsgründen haben und geht davon aus, dass diese ihre aktuelle Position aufgrund der Projektion haben, so bleibt lediglich ein Punkt in dem inneren Toleranzbereich übrig. Dies ist der Aspekt der \emph{Unabhängigkeit}, welcher eindeutig von den Nutzern richtig in den inneren Toleranzbereich eingeordnet wurde.
     
@@ -457,7 +456,7 @@
         
     
     \clearpage
-    \section{Eidesstaatliche Erklärung}
+    \section{Eidesstattliche Erklärung}
         Hiermit erklären wir, dass wir die vorliegende Hausarbeit selbstständig verfasst und keine anderen als die angegebenen Hilfsmittel benutzt haben.\\
         Die Stellen der Hausarbeit, die andere Quellen im Wortlaut oder dem Sinn nach entnommen wurden, sind durch Angabe der Herkunft kenntlich gemacht. Dies gilt auch für Zeichnungen, Skizzen, bildliche Darstellungen sowie für Quellen aus dem Internet.
         
