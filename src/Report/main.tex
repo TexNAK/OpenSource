@@ -145,6 +145,39 @@
 				\item Bei Skalen wurde darauf geachtet eine gerade Anzahl an Optionen anzubieten, um den Nutzer nicht die Möglichkeit zu bieten neutral zu antworten.
 				\item Die Texte sollen möglichst allgemeinverständlich geschrieben sein, um auch Nutzern ohne technischen Hintergrund die Teilnahme an der Umfrage zu ermöglichen.
 			 \end{itemize}
+			 
+			 \subsubsection{Softwarebeispiel}
+			     \begin{table}[!htbp]
+			         \centering
+			         \begin{tabularx}{\textwidth}{rcX}
+			               Name & OSS & Quelle\\\hline\hline
+			               Firefox & Ja & \tiny\url{https://www.openhub.net/p/firefox} [Online; letzter Zugriff 06.03.1018] \\
+			               Chrome & Ja & \tiny\url{https://www.chromium.org} [Online; letzter Zugriff 26.02.1018] \\
+			               Safari & Ja & \tiny\url{https://developer.apple.com/opensource/} [Online; letzter Zugriff 26.02.1018]\\
+			               Chromium & Ja & \tiny\url{https://www.chromium.org} [Online; letzter Zugriff 26.02.1018] \\
+			               Opera & Ja & \\\hline
+			               Windows & Nein & \tiny\url{https://www.microsoft.com/en-us/windows/get-windows-10} [Online; letzter Zugriff 06.03.1018]\\
+			               macOS & Nein & \tiny\url{https://developer.apple.com/opensource/} [Online; letzter Zugriff 26.02.1018] \\
+			               Linux & Ja & \tiny\url{https://www.kernel.org/category/faq.html} [Online; letzter Zugriff 06.03.1018] \\
+			               Android & Ja & \tiny\url{https://source.android.com} [Online; letzter Zugriff 06.03.1018] \\
+			               iOS & Nein & \tiny\url{https://developer.apple.com/opensource/} [Online; letzter Zugriff 26.02.1018] \\\hline
+			               Wikipedia & Ja & \tiny\url{https://www.mediawiki.org/wiki/Download} [Online; letzter Zugriff 26.02.1018]\\
+			               Moodle & Ja & \tiny\url{https://docs.moodle.org/dev/Main_Page} [Online; letzter Zugriff 06.03.1018] \\
+			               ownCloud/NextCloud & Ja & \tiny\url{https://owncloud.org/faq/} [Online; letzter Zugriff 06.03.1018] \\\hline
+			               Open-/LibreOffice & Ja & \tiny\url{https://openoffice.apache.org/get-involved.html} [Online; letzter Zugriff 06.03.1018] \\
+			               Microsoft Office & Nein & \tiny\url{https://products.office.com/en-US/} [Online; letzter Zugriff 06.03.1018]\\
+			               LaTeX & Ja & \tiny\url{https://www.tug.org/texlive/svn/} [Online; letzter Zugriff 06.03.1018] \\
+			               GIMP & Ja & \tiny\url{https://www.gimp.org/about/} [Online; letzter Zugriff 06.03.1018]\\
+			               Photoshop & Nein & \tiny\url{https://www.photoshop.com} [Online; letzter Zugriff 06.03.1018]\\
+			               VLC & Ja & \tiny\url{https://www.videolan.org/vlc/download-sources.html} [Online; letzter Zugriff 06.03.1018]\\
+			               Windows Media Player & Nein & \tiny\url{https://support.microsoft.com/en-us/help/14209} [Online; letzter Zugriff 06.03.1018]\\
+			               Thunderbird & Ja & \tiny\url{https://support.mozilla.org/en-US/kb/thunderbird-faq} [Online; letzter Zugriff 26.02.1018] \\
+			               7-Zip & Ja & \tiny\url{http://7-zip.org} [Online; letzter Zugriff 06.03.1018]\\
+			               WinRAR & Nein & \tiny\url{https://www.rarlab.com} [Online; letzter Zugriff 06.03.1018]
+			         \end{tabularx}
+			         \caption{Liste mit Software, die in der Umfrage verwendet wurde}
+			         \label{table:software_examples}
+			     \end{table}
 			     
 		\subsection{Durchführung}
             \subsubsection{Verbreitung}
@@ -153,11 +186,11 @@
     \section{Auswertung}
         \subsection{Vorgehen}
             \paragraph{Auswertung des Freifeldes}
-                Um mit den Daten des Freifeldes zu arbeiten, wurden zunächst alle Begriffe, die die Nutzer eingegeben haben, einer Kategorie zugeordnet. Alle Begriffe, denen kein sinnvoller Inhalt zugeordnet werden konnte, wurden in der Kategorie '-' zusammengefasst. Diese Zuordnung ist in der Tabelle \ref{table:categories} auf Seite \pageref{table:categories} dargestellt.\\
+                Um mit den Daten des Freifeldes zu arbeiten, wurden zunächst alle Begriffe, die die Nutzer eingegeben haben, einer Kategorie zugeordnet. Alle Begriffe, denen kein sinnvoller Inhalt zugeordnet werden konnte, wurden in der Kategorie '-' zusammengefasst. Diese Zuordnung ist in Tabelle \ref{table:categories} dargestellt.\\
             
-            \begin{table}[h]
+            \begin{table}[!htbp]
                 \begin{tabularx}{\textwidth}{rX}
-                    Kategorie & Begriffe \\
+                    Kategorie & Begriffe (Lower case) \\
                     \hline
                     - & \tiny geht, ?, hilfee, komische, privat, , !, nutze, wissentlich, nix, ibt, immer noch nicht verstanden was es ist, weil, keine ahnung, .., ich, blub, frage, tue, meist ohne opensource, benutze, modell, ..., warum ist das hier pflichtfeld?, bla, es sie g, nicht, ohne, und, ich nicht\\
                     Alternativlos & \tiny alternativlos, keine alternative\\
@@ -190,8 +223,8 @@
                     Weiterentwicklung & \tiny weiterentwicklung\\
                     Zufall & \tiny keine gründe, hat keinen speziellen grund, zufall, weil software die ich brauche zufällig open-source ist\\
                 \end{tabularx}
-                \caption{Zuordnung der Begriffe des Freifeldes zu Kategorien}
-            \label{table:categories}
+                \caption{Zuordnung: Begriffe des Freifeldes zu Kategorien}
+                \label{table:categories}
             \end{table}
             
             Im späteren Verlauf der Arbeit werden die Werte des Freifelds mit den Ergebnissen einer Schweizer Studie verglichen. Dazu bedarf es einer Zuordnung zu den vorliegenden Kategorien aus der Studie, welche in Tabelle \ref{table:privateToCommercialCategories} dargelegt ist.\\
@@ -214,7 +247,7 @@
                     Qualität & Stabilität
                 \end{tabular}
                 \egroup
-                \caption{Zuordnung | Freifeld $\leftrightarrow$ Schweizer Studie}
+                \caption{Zuordnung: Freifeld Kategorien zu Aspekten der Schweizer Studie}
                 \label{table:privateToCommercialCategories}
             \end{table}
             
@@ -224,16 +257,97 @@
 
     \section{Ergebnisse}
         \subsection{Wissen über OSS}
+            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} von Endnutzern ist, ob diese wissen, ob es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
+            
+            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche Open Source sind oder \gls{oss} nutzt. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
+            
+                        
             \begin{figure}
-                \includegraphics[width=\textwidth]{assets/results/definition/definition.pdf}
-                \caption{Korrektheit der eigenen Definition nach Selbsteinschätzung geordnet.}
+                \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudgingDetailedOSSOnly2.pdf}
+                \caption{Abweichung des Wissens über \gls{oss} von $50\%$.}
+                \label{figure:knowledge_difference}
             \end{figure}
-        
-            \begin{figure}
-                \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudging}
-                \caption{Attribut Open Source  |  unbeeinflusste Nutzereinschätzung}
-            \end{figure}
-            Das Wissen über Open Source Software bei Endanwendern ...
+            
+            
+            \subsubsection{Aufbau des Diagramms}
+                \paragraph{Kategorien}
+                    Für die Auswertung wurden die Anwendungen wie auch schon bei der Umfrage in die Kategorien Browser, Betriebssysteme (OS), Web und Desktop gruppiert.
+                    
+                \paragraph{Werte}
+                    Zunächst ist zu betrachten, wie das Ergebnis ausfallen würde, wenn alle Befragten raten würden. In diesem Fall wäre der Erwartungswert die Hälfte der Befragten, da es sich um eine Ja-Nein-Frage, also eine Frage mit nur zwei Möglichkeiten, handelt.
+                    
+                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50\%$ und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
+            
+                    \begin{tabularx}{\textwidth}{rX}
+                        \textbf{Ergebnis} & \textbf{Auswertung} \\\hline
+                        $= 50\%$ & Die Befragten haben haben das selbe Ergebnis erreicht, wie beim Raten. Das bedeutet, dass im Durchschnitt kein Wissen über \gls{oss} vorhanden ist.\\
+                        $> 50\%$ & Ein größerer Teil der Befragten konnten die Frage richtig beantworten. Das bedeutet, dass im Durchschnitt richtiges Wissen über \gls{oss} vorhanden ist. Im Extremfall 100\% konnte jeder der Befragten die Frage richtig beantworten.\\
+                        $< 50\%$ & Ein größerer Teil der Befragten hat die Frage falsch beantwortet. Das bedeutet, dass im Durchschnitt falsches Wissen über \gls{oss} vorhanden ist. Im Extremfall 0\% hat keiner der Befragten die Frage richtig beantworten.  
+                    \end{tabularx}
+            
+                \paragraph{Auswahl der Datenpunkte}
+                    Bei der Auswertung wurden nur die Antworten von Nutzern in die Auswertung einbezogen, die auch angegeben haben die Software zu verwendet um sicher zu stellen, dass den Nutzern die Software bekannt ist. Andernfalls würde das Ergebnis verfälscht werden.
+                    
+            \subsubsection{Auswertung des Diagramms}
+                In dem Graphen wird deutlich, dass das Wissen über \gls{oss} stark von der Kategorie abhängig ist. %TODO: add more content
+            
+                Nimmt man an, dass $r \in \left[0...1\right]$ Prozent der Befragten sicher wussten, dass es sich um \gls{oss} Software handelt, bedeutet dies, dass $d = 1 - r$ Prozent geraten haben. Unter Einbezug des Erwartungswertes von $50\%$ beim Raten erhält man dann als Gesamt-Erwartungswert $\mu$:
+            
+                \begin{equation}
+                \begin{split}
+                    \mu &= r + \frac{d}{2} \\
+                        &= \frac{2r + 1 - r}{2} \\
+                        &= \frac{r + 1}{2} \\
+                    r   &= 2\mu - 1
+                \end{split}
+                \end{equation}
+            
+                Mit dieser so erhaltenen Formel für $r$ lässt sich der reale Anteil der Befragten ermittelt, die in der Lage waren richtig zu beantworten, ob es sich bei einer Anwendung um \gls{oss} handelt oder sie diese nutzt. Die sich daraus ergebenen Werte für den realen Prozentanteil sind in Tabelle \ref{table:knowledge_by_category} dargestellt. Negative Werte bedeuten dabei wie auch in der vorangegangenen Abbildung \ref{figure:knowledge_difference}, dass falsches Wissen vorhanden ist.
+                
+                %TODO: Auswertung
+                
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rcccc}
+                        Kategorie & Umfang & Erfolge & Prozent Statistik & Prozent Realität \\\hline\hline
+                        Browser & $246$ & $103$ & $41.87\%$ & $-16.26\%$\\
+                        OS & $122$ & $83$ & $68.03\%$ & $36.07\%$\\
+                        Web & $181$ & $106$ & $58.56\%$ & $17.13\%$\\
+                        Desktop & $278$ & $195$ & $70.14\%$ & $40.29\%$\\\hline
+                        Gesamt & $827$ & $487$ & $58.89\%$ & $17.78\%$
+                    \end{tabular}
+                    \caption{Wissen über \gls{oss} nach Kategorien}
+                    \label{table:knowledge_by_category}
+                \end{table}
+                
+                \paragraph{Positive Abweichung}
+                    Besonders gut haben Desktop Anwendungen ({\scriptsize 18.03\%}) und Betriebsysteme ({\scriptsize 20.14\%}) abgeschnitten.
+                    
+                    Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird und damit auch andere Desktop Betriebssysteme als nicht \gls{oss}.%TODO: Citation needed.
+                    %TODO: Hier Auswertung vervollständigen.
+                    
+                    %TODO: Desktop
+                
+                \paragraph{Negative Abweichung}
+                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:software_examples}}, da hier falsches Wissen ({\scriptsize -8.13\%}) vorhanden ist.                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung vervollständigen. 
+                    
+                \paragraph{Signifikanz der Abweichung}
+                
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rccccc}
+                        Kategorie & Umfang & Erfolge & 2-Sigma & 3-Sigma & Signifikanz \\\hline\hline
+                        Browser & $246$ & $103$ & \tiny{[ 107.3156 ; 138.6844 ]} & \tiny{[ 99.4734 ; 146.5266 ]} & Signifikant\\
+                        OS & $122$ & $83$ & \tiny{[ 49.9546 ; 72.0454 ]} &  \tiny{[ 44.432 ; 77.568 ]} & Hoch\\
+                        Web & $181$ & $106$ & \tiny{[ 77.0464 ; 103.9536 ]} &  \tiny{[ 70.3196 ; 110.6804 ]} &  Signifikant\\
+                        Desktop & $278$ & $195$ & \tiny{[ 122.3267 ; 155.6733 ]} & \tiny{[ 113.99 ; 164.01 ]} & Hoch\\\hline
+                        Gesamt & $827$ & $487$ & \tiny{[ 384.7424 ; 442.2576 ]} & \tiny{[ 370.3636 ; 456.6364 ]} & Hoch
+                    \end{tabular}
+                    \caption{Signifikanz der Abweichung vom Erwartungswert}
+                    \label{table:knowledge_by_category_sigma}
+                \end{table}
+                
+                Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt. Es ist erkennbar, dass in allen Kategorien mindestens eine signifikante Abweichung gegeben ist. Das bedeutet, dass ein Teil der Befragten nicht geraten hat sondern auf Grundlage von Vorwissen, das im Fall von Browsern im Durchschnitt falsch, sonst aber richtig ist, eine Entscheidung gefällt haben.
             
         \subsection{Nutzungsgründe für Open Source Software}
             Im Jahr 2015 führte die Forschungsstelle Digitale Nachhaltigkeit des Instituts für Wirtschaftsinformatik an der Universität Bern eine Befragung von 200 Schweizer Unternehmen durch\cite{oss:studie}. Eins der Ziele der Umfrage war es, ein Ranking der Nutzungsgründe von \gls{oss} für Unternehmen aufzustellen.
@@ -296,7 +410,7 @@
             \subsubsection{Interpretation der Daten}
                 \paragraph{Abweichung von der Realität}
                     Betrachtet man den äußeren Toleranzbereich, so liegen die Nutzer mit ihrer Einschätzung grob richtig. Schaut man nun allerdings auf den inneren Fehlerbereich, so liegen nur noch $40\%$ der Kategorien mit ihrem Ranking in der unmittelbaren Nähe der Schweizer Unternehmen. Dies lässt darauf schließen, dass die allgemeine Ansicht welche Aspekte für Unternehmen von Bedeutung sind vorhanden, jedoch nicht stark ausgeprägt sind.\\
-                    Des Weiteren ist auffällig, dass die Aspekte \emph{Offene Standards} und \emph{Stablität} welche sich in Relation zu den privaten Gründen in die richtige Richtung orientieren beide zu schwach eingeschätzt wurden.
+                    Des Weiteren ist auffällig, dass die Aspekte \emph{Offene Standards} und \emph{Stabilität} welche sich in Relation zu den privaten Gründen in die richtige Richtung orientieren beide zu schwach eingeschätzt wurden.
                     
                 \paragraph{Projektion privater Gründe}
                     Schaut man sich die Werte ausserhalb des inneren Fehlerbereichs an, so fällt auf, dass $50\%$ der Punkte ({\scriptsize Community, Anpassbarkeit, Transparenz}) eine sehr geringe Distanz zu den privaten Gründen haben. Daraus lässt sich ableiten, dass die Nutzer möglicherweise ihre privaten Gründe auf Unternehmen projizieren.\\
