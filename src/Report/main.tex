@@ -58,7 +58,7 @@
     % Abstract
     \clearpage
     \begin{abstract}
-         \gls{oss} wird in vielen Bereichen eingesetzt. In dieser Arbeit wird analysiert, wie Endanwender \gls{oss} wahrnehmen.
+         \gls{oss} wird in vielen Bereichen von Betriebssystemen über Anwendersoftware bis hin zu kommerziellen Produkten eingesetzt. Es gibt bereits Studien zu dem Einsatz von quelloffener Software aus der Sicht von kommerziellen Betrieben. Gegenstand dieser Arbeit ist es die Situation aus der Perspektive der Endanwender darzulegen und mit der der Unternehmen zu vergleichen.
     \end{abstract}
     \newpage
 
@@ -72,7 +72,7 @@
     
                     
     \section{Fragestellung}
-        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Basis von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}
+        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Grundbaustein von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}.
 		
 		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\cite{oss:lotus-to-linux}.
 
@@ -84,7 +84,7 @@
                 \end{quote}
                 
             \subsubsection{Nutzung von Open Source Software}\label{section:indirekte_nutzung}
-                Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterschieden werden.
+                Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterteilt werden.
                 
                 \paragraph{Direkte Nutzung}
                     Zum einen gibt es die direkte Nutzung, bei der der Nutzer eine Software verwendet, die Open Source ist, also dessen Source Code frei zugänglich ist.
@@ -141,12 +141,12 @@
 				
 			\subsubsection{Designentscheidungen}
 			 \begin{itemize}
-			     \item Es wurde überwiegend auf Freifelder verzichtet, um die Auswertung zu vereinfachen. Deshalb wurde bei dem eingesetzten Freifeld ein einheitliches Format gefordert.
+			     \item Es wurde überwiegend auf Freifelder verzichtet, um die Auswertung zu vereinfachen. Aus dem selben Grund wurde bei dem eingesetzten Freifeld ein einheitliches Format gefordert.
 				\item Bei Skalen wurde darauf geachtet eine gerade Anzahl an Optionen anzubieten, um den Nutzer nicht die Möglichkeit zu bieten neutral zu antworten.
 				\item Die Texte sollen möglichst allgemeinverständlich geschrieben sein, um auch Nutzern ohne technischen Hintergrund die Teilnahme an der Umfrage zu ermöglichen.
 			 \end{itemize}
 			 
-			 \subsubsection{Softwarebeispiel}
+			 \subsubsection{Softwarebeispiele}
 			     \begin{table}[!htbp]
 			         \centering
 			         \begin{tabularx}{\textwidth}{rcX}
@@ -180,6 +180,8 @@
 			     \end{table}
 			     
 		\subsection{Durchführung}
+            \subsubsection{Umfragetool}
+                Die Umfrage wurde mithilfe von Google Forms\footnote{\url{https://www.google.com/forms/about/}} erstellt und durchgeführt. Anschließend wurden die Daten als CSV exportiert, mithilfe von Swift\footnote{\url{https://swift.org/about/}} strukturiert und unter Zuhilfenahme von Numbers\footnote{\url{https://www.apple.com/numbers/}} grafisch dargestellt. Sämtliche Swift-Programme die zur Strukturierung verwendet wurden sind Open-Source auf GitHub\footnote{\url{https://github.com/TexNAK/OpenSource/tree/master/src/Auswertung}}.
             \subsubsection{Verbreitung}
                 Um die Reichweite der Umfrage zu maximieren und die Kosten zu minimieren wurde diese in Form einer Onlinebefragung umgesetzt. Dabei wurden Kanäle wie Social Media, E-Mail, Messenger genutzt, um auf die Umfrage aufmerksam zu machen. Zudem wurde der Link zu der Umfrage über private Kontakte und an der Nordakademie verbreitet.
                 
@@ -283,9 +285,9 @@
 
     \section{Ergebnisse}
         \subsection{Wissen über OSS}
-            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} von Endnutzern ist, ob diese wissen, ob es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
+            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} durch Endanwender ist, ob diese wissen, dass es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
             
-            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche Open Source sind oder \gls{oss} nutzt. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
+            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche Open Source sind oder \gls{oss} nutzen. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
             
                         
             \begin{figure}
@@ -435,8 +437,8 @@
                                
             \subsubsection{Interpretation der Daten}
                 \paragraph{Abweichung von der Realität}
-                    Betrachtet man den äußeren Toleranzbereich, so liegen die Nutzer mit ihrer Einschätzung grob richtig. Schaut man nun allerdings auf den inneren Fehlerbereich, so liegen nur noch $40\%$ der Kategorien mit ihrem Ranking in der unmittelbaren Nähe der Schweizer Unternehmen. Dies lässt darauf schließen, dass die allgemeine Ansicht welche Aspekte für Unternehmen von Bedeutung sind vorhanden, jedoch nicht stark ausgeprägt sind.\\
-                    Des Weiteren ist auffällig, dass die Aspekte \emph{Offene Standards} und \emph{Stabilität} welche sich in Relation zu den privaten Gründen in die richtige Richtung orientieren beide zu schwach eingeschätzt wurden.
+                    Betrachtet man den äußeren Toleranzbereich, so liegen die Nutzer mit ihrer Einschätzung grob richtig. Schaut man nun allerdings auf den inneren Fehlerbereich, so liegen sie nur noch mit $40\%$ der Kategorien mit ihrem Ranking in der unmittelbaren Nähe der Schweizer Unternehmen. Dies lässt darauf schließen, dass die allgemeine Ansicht welche Aspekte für Unternehmen von Bedeutung sind vorhanden, jedoch nicht stark ausgeprägt sind.\\
+                    Des Weiteren ist auffällig, dass die Aspekte \emph{Offene Standards} und \emph{Stabilität} welche sich in Relation zu den privaten Gründen in die richtige Richtung orientieren beide zu schwach eingeschätzt wurden. % TODO Folgerung daraus? Wieso zu schwach?
                     
                 \paragraph{Projektion privater Gründe}
                     Schaut man sich die Werte ausserhalb des inneren Fehlerbereichs an, so fällt auf, dass $50 \%$ der Punkte ({\scriptsize Community, Anpassbarkeit, Transparenz}) eine sehr geringe Distanz zu den privaten Gründen haben. Daraus lässt sich ableiten, dass die Nutzer möglicherweise ihre privaten Gründe auf Unternehmen projizieren.\\
