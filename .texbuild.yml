@@ -1,5 +1,4 @@
 spellchecking: true
 statistics: false
 entrypoints:
-  - ./src/Expose/main.tex
   - ./src/Report/main.tex
