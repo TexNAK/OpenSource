@@ -253,7 +253,7 @@
             
         \subsection{Validität der Ergebnisse}
             Der Eingangs auf Seite   \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
-            \subsubsection{Demographische Gruppen}\label{section:demogaphic_groups}
+            \subsubsection{Demographische Gruppen}\label{section:demographic_groups}
                 Abbildung \ref{fig:rowsPer:activity} legt dar, dass der Anteil der Schüler nur sehr gering ist und diese Gruppe mit nur acht Teilnehmern nicht repräsentativ ist. Des Weiteren ist zu beachten, dass der Anteil von Personen mit sehr hohen (6) und hohen (5) Computerkenntnissen nach Abbildung \ref{fig:rowsPer:knowledge} einen Großteil der Befragten ausmacht. In Abbildung \ref{fig:rowsPer:knowledgeCite} sind die Werte einer unabhängigen Studie der Österreichischen Computer Gesellschaft\cite{demographicDistributionKnowledge} dargestellt, welche eine weitreichende Übereinstimmung mit der Verteilung der Stichprobe dieser Arbeit haben. Folglich können repräsentative Aussagen im Bezug auf den Kenntnisstand der Nutzer getätigt werden.
             
         \begin{figure}[h]
@@ -378,10 +378,10 @@
                 Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt. 
                 
                 \subparagraph{Beschreibung der Tabelle}
-                    Die Spalten \emph{Erfolge} und \emph{Umfang} geben an, wie viele Antworten insgesamt beziehungsweise korrekt abgegeben wurden. In den Spalten $2\sigma$-Umgebung und $3\sigma$-Umgebung sind die entsprechenden Sigma-Umgebungen eingetragen, anhand derer sich die Signifikanz in der letzten Spalte bestimmen lässt. Signifikant bedeutet dabei, dass die Abweichung in der $2\sigma$-Umgebung liegt und damit zu $95.5\%$ abweichen. Hoch bedeutet, dass die Abweichung in der $3\sigma$-Umgebung liegt und damit zu $99.7\%$ abweicht.
+                    Die Spalten \emph{Erfolge} und \emph{Umfang} geben an, wie viele Antworten insgesamt beziehungsweise korrekt abgegeben wurden. In den Spalten $2\sigma$-Umgebung und $3\sigma$-Umgebung sind die entsprechenden Sigma-Umgebungen eingetragen, anhand derer sich die Signifikanz in der letzten Spalte bestimmen lässt. Signifikant bedeutet dabei, dass die Abweichung in der $2\sigma$-Umgebung liegt und damit mit einer $95.5\%$ Wahrscheinlichkeit tatsächlich abweicht. Hoch bedeutet, dass die Abweichung in der $3\sigma$-Umgebung liegt und damit mit einer $99.7\%$ Wahrscheinlichkeit tatsächlich abweicht.
                     
                 \subparagraph{Auswertung}
-                    Es ist erkennbar, dass in allen Kategorien mindestens eine signifikante Abweichung gegeben ist. Das bedeutet, dass ein Teil der Befragten nicht geraten hat sondern auf Grundlage von Vorwissen, das im Fall von Browsern im Durchschnitt falsch, sonst aber richtig ist, eine Entscheidung gefällt haben.
+                    Es ist erkennbar, dass in allen Kategorien mindestens eine signifikante Abweichung gegeben ist. Das bedeutet, dass ein Teil der Befragten nicht geraten hat sondern auf Grundlage von Vorwissen eine Entscheidung gefällt hat. Im Fall der Browser ist dieses Vorwissen im Durchschnitt falsch, bei allen anderen Kategorien richtig.
                     
             
         \subsection{Nutzungsgründe für Open Source Software}
@@ -453,12 +453,11 @@
                     Nimmt man alle Datenpunkte die eine maximale Abweichung von zwei zu den privaten Nutzungsgründen haben und geht davon aus, dass diese ihre aktuelle Position aufgrund der Projektion haben, so bleibt lediglich ein Punkt in dem inneren Toleranzbereich übrig. Dies ist der Aspekt der \emph{Unabhängigkeit}, welcher eindeutig von den Nutzern richtig in den inneren Toleranzbereich eingeordnet wurde.
     
         \subsection{Demographische Differenzen}
-            % TODO: Beschreibung.
             Da es selten der Fall ist, dass Wissen in der Gesellschaft homogen verteilt ist, enthielt die Umfrage sowohl ein Frage zur Selbsteinschätzung der Computerkenntnisse als auch eine zur aktuellen Tätigkeit, um darauf basierend Verschiebungen in der Wissensverbreitung zu untersuchen.
             
             \subsubsection{Selbsteinschätzung}
                 % TODO reference zu kritik: Nur daten, wenn oss genutzt
-                Um zu ermitteln, ob es Differenzen bei verschiedenen Selbsteinschätzungen gibt, wurde die Korrektheit der Angabe, ob eine Software open-source ist wie in Abschnitt \ref{section:knowledge_oss} nach Kategorie gruppiert ausgewertet. Dabei wurde aber die Antworten der Nutzer mit einer Selbsteinschätzung von eins bis vier (im Folgenden als Gruppe 1-4 bezeichnet) und die der Nutzer mit fünf oder sechs (im Folgenden als Gruppe 5-6 bezeichnet) getrennt zusammengefasst und in Abbildung \ref{figure:knowledge_by_category_self_assessment} dargestellt, um diese vergleichen zu können.
+                Um zu ermitteln, ob es Differenzen bei verschiedenen Selbsteinschätzungen gibt, wurde die Korrektheit der Angabe, ob eine Software open source ist wie in Abschnitt \ref{section:knowledge_oss} nach Kategorie gruppiert ausgewertet. Dabei wurde aber die Antworten der Nutzer mit einer Selbsteinschätzung von eins bis vier (im Folgenden als Gruppe 1-4 bezeichnet) und die der Nutzer mit fünf oder sechs (im Folgenden als Gruppe 5-6 bezeichnet) getrennt zusammengefasst und in Abbildung \ref{figure:knowledge_by_category_self_assessment} dargestellt, um diese vergleichen zu können.
                 
                 \paragraph{Signifikanz}
                     Um die Signifikanz der Differenzen beurteilen zu können wurde ein Signifikanztest der Abweichung der Ergebnisse der Gruppe 5-6 zu den Ergebnissen der Gruppe 1-4 durchgeführt und in Tabelle \ref{table:knowledge_by_category_sigma_self_assessment} zusammengefasst.
@@ -496,7 +495,7 @@
             \begin{figure}
                 \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudgingDetailedOSSOnlyByOccupation.pdf}
                 \caption{Wissen über \gls{oss} nach Tätigkeit}
-                \label{figure:ossByOccupation}
+                \label{figure:knowledge_by_occupation}
             \end{figure}
             
     
