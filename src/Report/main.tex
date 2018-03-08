@@ -58,7 +58,7 @@
     % Abstract
     \clearpage
     \begin{abstract}
-         \gls{oss} wird in vielen Bereichen eingesetzt. In dieser Arbeit wird analysiert, wie Endanwender \gls{oss} wahrnehmen.
+         \gls{oss} wird in vielen Bereichen von Betriebssystemen über Anwendersoftware bis hin zu kommerziellen Produkten eingesetzt. Es gibt bereits Studien zu dem Einsatz von quelloffener Software aus der Sicht von kommerziellen Betrieben. Gegenstand dieser Arbeit ist es die Situation aus der Perspektive der Endanwender darzulegen und mit der der Unternehmen zu vergleichen.
     \end{abstract}
     \newpage
 
@@ -72,7 +72,7 @@
     
                     
     \section{Fragestellung}\label{section:fragestellung}
-        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Basis von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}
+        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Grundbaustein von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}.
 		
 		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\cite{oss:lotus-to-linux}. Ausserdem ist zu erwarten, dass Nutzer mit höheren Computerkenntnissen mehr über \gls{oss} wissen.
 
@@ -84,7 +84,7 @@
                 \end{quote}
                 
             \subsubsection{Nutzung von Open Source Software}\label{section:indirekte_nutzung}
-                Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterschieden werden.
+                Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterteilt werden.
                 
                 \paragraph{Direkte Nutzung}
                     Zum einen gibt es die direkte Nutzung, bei der der Nutzer eine Software verwendet, die Open Source ist, also dessen Source Code frei zugänglich ist.
@@ -141,12 +141,12 @@
 				
 			\subsubsection{Designentscheidungen}
 			 \begin{itemize}
-			     \item Es wurde überwiegend auf Freifelder verzichtet, um die Auswertung zu vereinfachen. Deshalb wurde bei dem eingesetzten Freifeld ein einheitliches Format gefordert.
+			     \item Es wurde überwiegend auf Freifelder verzichtet, um die Auswertung zu vereinfachen. Aus dem selben Grund wurde bei dem eingesetzten Freifeld ein einheitliches Format gefordert.
 				\item Bei Skalen wurde darauf geachtet eine gerade Anzahl an Optionen anzubieten, um den Nutzer nicht die Möglichkeit zu bieten neutral zu antworten.
 				\item Die Texte sollen möglichst allgemeinverständlich geschrieben sein, um auch Nutzern ohne technischen Hintergrund die Teilnahme an der Umfrage zu ermöglichen.
 			 \end{itemize}
 			 
-			 \subsubsection{Softwarebeispiel}
+			 \subsubsection{Softwarebeispiele}
 			     \begin{table}[!htbp]
 			         \centering
 			         \begin{tabularx}{\textwidth}{rcX}
@@ -180,6 +180,8 @@
 			     \end{table}
 			     
 		\subsection{Durchführung}
+            \subsubsection{Software}
+                Die Umfrage wurde mithilfe von Google Forms\footnote{\url{https://www.google.com/forms/about/}} erstellt und durchgeführt. Anschließend wurden die Daten als CSV exportiert, mithilfe von Swift\footnote{\url{https://swift.org/about/}} strukturiert und unter Zuhilfenahme von Numbers\footnote{\url{https://www.apple.com/numbers/}} grafisch dargestellt. Sämtliche Swift-Programme die zur Strukturierung verwendet wurden sind open-source auf GitHub\footnote{\url{https://github.com/TexNAK/OpenSource/tree/master/src/Auswertung}}.
             \subsubsection{Verbreitung}
                 Um die Reichweite der Umfrage zu maximieren und die Kosten zu minimieren wurde diese in Form einer Onlinebefragung umgesetzt. Dabei wurden Kanäle wie Social Media, E-Mail, Messenger genutzt, um auf die Umfrage aufmerksam zu machen. Zudem wurde der Link zu der Umfrage über private Kontakte und an der Nordakademie verbreitet.
                 
@@ -252,7 +254,7 @@
             \end{table}
             
         \subsection{Validität der Ergebnisse}
-            Der Eingangs auf Seite   \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
+            Der Eingangs auf Seite \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
             \subsubsection{Demographische Gruppen}\label{section:demographic_groups}
                 Abbildung \ref{fig:rowsPer:activity} legt dar, dass der Anteil der Schüler nur sehr gering ist und diese Gruppe mit nur acht Teilnehmern nicht repräsentativ ist. Des Weiteren ist zu beachten, dass der Anteil von Personen mit sehr hohen (6) und hohen (5) Computerkenntnissen nach Abbildung \ref{fig:rowsPer:knowledge} einen Großteil der Befragten ausmacht. In Abbildung \ref{fig:rowsPer:knowledgeCite} sind die Werte einer unabhängigen Studie der Österreichischen Computer Gesellschaft\cite{demographicDistributionKnowledge} dargestellt, welche eine weitreichende Übereinstimmung mit der Verteilung der Stichprobe dieser Arbeit haben. Folglich können repräsentative Aussagen im Bezug auf den Kenntnisstand der Nutzer getätigt werden.
             
@@ -284,7 +286,7 @@
     \section{Ergebnisse}
         %TODO: Einleitung 3 Aspekte etc.
         \subsection{Wissen über OSS}\label{section:knowledge_oss}
-            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} von Endnutzern ist, ob diese wissen, ob es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
+            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} durch Endnutzern ist, ob diese wissen, ob es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
             
             % TODO reference zu kritik: Nur daten, wenn oss genutzt
             Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche Open Source sind oder \gls{oss} nutzt. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
@@ -385,6 +387,7 @@
                     
             
         \subsection{Nutzungsgründe für Open Source Software}
+            \label{section:usageReasons}
             Im Jahr 2015 führte die Forschungsstelle Digitale Nachhaltigkeit des Instituts für Wirtschaftsinformatik an der Universität Bern eine Befragung von 200 Schweizer Unternehmen durch\cite{oss:studie}. Eins der Ziele der Umfrage war es, ein Ranking der Nutzungsgründe von \gls{oss} für Unternehmen aufzustellen.
 
             \paragraph{Sicht der Nutzer auf Unternehmen}
@@ -397,7 +400,7 @@
                 % TODO Trendline in graph is broken
                 \includegraphics[width=\textwidth]{assets/results/commercialReasoning/usageReasonRanking}
                 \caption{Ranking der Nutzungsgründe}
-                \label{table:usageRanking}
+                \label{figure:usageRanking}
             \end{figure}
                 
             \subsubsection{Aufbau des Diagramms}
@@ -436,7 +439,7 @@
             
             \subsubsection{Auswertung des Diagramms}
                 \paragraph{Sicht der Nutzer auf Unternehmen}
-                    Abbildung \ref{table:usageRanking} kann man entnehmen, dass sich $40\%$ der Datenpunkte im inneren Fehlerbereich befinden ({\scriptsize Kosteneinsparungen, Unabhängigkeit, Innovation, Mitarbeitende}) und somit als richtig anzusehen sind. Komplementär dazu befinden sich $60\%$ der Datenpunkte im äußeren Fehlerbereich und \emph{keine} Datenpunkte außerhalb der Fehlerbereiche.\\
+                    Abbildung \ref{figure:usageRanking} kann man entnehmen, dass sich $40\%$ der Datenpunkte im inneren Fehlerbereich befinden ({\scriptsize Kosteneinsparungen, Unabhängigkeit, Innovation, Mitarbeitende}) und somit als richtig anzusehen sind. Komplementär dazu befinden sich $60\%$ der Datenpunkte im äußeren Fehlerbereich und \emph{keine} Datenpunkte außerhalb der Fehlerbereiche.\\
                     Dabei ist zu beachten, dass $20\%$ der Kategorien oberhalb ({\scriptsize Anpassbarkeit, Transparenz}) und $40\%$ unterhalb ({\scriptsize Offene Standards, Community, Sicherheit, Stabilität}) des inneren Toleranzbereichs liegen.
                     
                 \paragraph{Abweichung von privaten Gründen}
@@ -444,8 +447,8 @@
                                
             \subsubsection{Interpretation der Daten}
                 \paragraph{Abweichung von der Realität}
-                    Betrachtet man den äußeren Toleranzbereich, so liegen die Nutzer mit ihrer Einschätzung grob richtig. Schaut man nun allerdings auf den inneren Fehlerbereich, so liegen nur noch $40\%$ der Kategorien mit ihrem Ranking in der unmittelbaren Nähe der Schweizer Unternehmen. Dies lässt darauf schließen, dass die allgemeine Ansicht welche Aspekte für Unternehmen von Bedeutung sind vorhanden, jedoch nicht stark ausgeprägt sind.\\
-                    Des Weiteren ist auffällig, dass die Aspekte \emph{Offene Standards} und \emph{Stabilität} welche sich in Relation zu den privaten Gründen in die richtige Richtung orientieren beide zu schwach eingeschätzt wurden.
+                    Betrachtet man den äußeren Toleranzbereich, so liegen die Nutzer mit ihrer Einschätzung grob richtig. Schaut man nun allerdings auf den inneren Fehlerbereich, so liegen sie nur noch mit $40\%$ der Kategorien mit ihrem Ranking in der unmittelbaren Nähe der Schweizer Unternehmen. Dies lässt darauf schließen, dass die allgemeine Ansicht welche Aspekte für Unternehmen von Bedeutung sind vorhanden, jedoch nicht stark ausgeprägt sind.\\
+                    Des Weiteren ist auffällig, dass die Aspekte \emph{Offene Standards} und \emph{Stabilität} welche sich in Relation zu den privaten Gründen in die richtige Richtung orientieren beide zu schwach eingeschätzt wurden. % TODO Folgerung daraus? Wieso zu schwach?
                     
                 \paragraph{Projektion privater Gründe}
                     Schaut man sich die Werte ausserhalb des inneren Fehlerbereichs an, so fällt auf, dass $50 \%$ der Punkte ({\scriptsize Community, Anpassbarkeit, Transparenz}) eine sehr geringe Distanz zu den privaten Gründen haben. Daraus lässt sich ableiten, dass die Nutzer möglicherweise ihre privaten Gründe auf Unternehmen projizieren.\\
@@ -503,11 +506,22 @@
     
     \clearpage
     \section{Zusammenfassung}
-        \subsection{Verbesserungen am Fragebogen}
-            % TODO
-            \begin{itemize}
-                \item In Umfrage sollte man nicht "Ja/Nein" sondern "Ja/Nein/Keine Ahnung" machen. Evtl. auch die maximal mögliche Signifikanz dessen erörtern.
-            \end{itemize}
+        \subsection{Selbstreflexion}
+            Im Folgenden wird kritisch auf das Vorgehen in dieser Arbeit eingegangen und mögliche Methoden zur Optimierung der Ergebnisse dargelegt.
+            \paragraph{Wann ist eine Software Open Source?}
+                In der Umfrage wurde lediglich erwähnt, dass eine Software im Sinne der Umfrage auch als Open Source gilt, wenn sie \gls{oss} beinhaltet. Wie bereits Eingangs beschrieben, werden genutzte Programmiersprachen oder Datenbanken nicht als signifikante Open Source Komponente betrachtet. Dies wurde aus dem Fragebogen nicht ersichtlich und man hätte für bessere Umfrageergebnisse genauer spezifizieren müssen, dass eine Anwendung als Open Source gilt, wenn sie selbst quelloffen ist aber auch dann, wenn ihre Funktionalität durch die Entfernung von Open Source Komponenten signifikant eingeschränkt wäre.
+                
+            \paragraph{Enthaltung}
+                Da der Fragebogen bei der Anwendungsmatrix lediglich die Optionen \emph{Ja} und \emph{Nein} beinhaltete besteht die Möglichkeit, dass die Befragten die Felder auf ihrem Standardwert ({\scriptsize Nein}) belassen haben, wenn sie sich unsicher waren. Dies hätte man umgehen können, indem man eine dritte Option für das Feld einfügt, welche Enthaltung repräsentiert. Um der potentiellen Verfälschung der Ergebnisse entgegenzuwirken wurden in dieser Arbeit lediglich die Datenpunkte der Nutzer in Betracht gezogen, die auch angegeben haben die Anwendung zu verwenden.
+                
+            \paragraph{Kategorisierung}
+                Für die privaten Nutzungsgründe gab es in der Umfrage ein Freifeld. Für den Vergleich in Abschnitt \ref{section:usageReasons} war es nötig die abgegebenen Stimmen in die Kategorien der Studie bzgl. der Unternehmen einzuordnen, was aufgrund der grundverschiedenen Anwendungszwecke dazu geführt hat, dass in dem Diagramm einige Stimmen der privaten Nutzungsgründe aufgrund der fehlenden Übereinstimmung mit den kommerziellen Kategorien nicht repräsentiert sind.
+                
+            \paragraph{Kulturelle Differenzen}
+                Es ist auf Basis der genutzten Verbreitungsmedien zu vermuten, dass die Datensätze überwiegend Stimmen aus Deutschland enthalten. Die Vergleichsstudien stammen aus Österreich\cite{demographicDistributionKnowledge} und der Schweiz\cite{oss:studie}. Dabei ist nicht auszuschließen, dass aufgrund diverser wirtschaftlicher, politischer, ideologischer und kulturelle Gründe die demographische Verteilung und IT-Kenntnisse sowie Nutzungsgründen von denen in Deutschland abweichen. Dies lässt sich auf Basis der vorliegenden Daten nicht ausschließen, aber es ist aufgrund der geografischen Nähe und nahezu identischen Sprache der drei zuvor genannten Ländern wahrscheinlich, dass die Abweichung nur gering ausfällt.
+                
+            \paragraph{Spiele}
+                Die Anwendungsmatrix in der Umfrage beinhaltete eine Kategorie zu Computerspielen. Diese Kategorie beinhaltete aufgrund eines Fehlers auf Seiten der Autoren ausschließlich Spiele, welche nicht Open Source sind und nur unsignifikante Mengen von Open Source Software für die kritische Funktionalität verwenden. Dies führte dazu, dass alle Datenpunkte aus dieser Kategorie für die Auswertung im Rahmen der drei in dieser Arbeit betrachteten Hauptaspekte nicht verwendbar waren. Aus dem Datensatz lässt sich lediglich schließen, dass $88.6\%$ der Leute, welche die Spiele nutzen, diese korrekt als Closed-Source einschätzten.
             
         \subsection{Fazit}
             % TODO
