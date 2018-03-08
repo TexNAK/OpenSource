@@ -254,7 +254,7 @@
             \end{table}
             
         \subsection{Validität der Ergebnisse}
-            Der Eingangs auf Seite   \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
+            Der Eingangs auf Seite \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
             \subsubsection{Demographische Gruppen}
                 Abbildung \ref{fig:rowsPer:activity} legt dar, dass der Anteil der Schüler nur sehr gering ist und diese Gruppe mit nur acht Teilnehmern nicht repräsentativ ist. Des Weiteren ist zu beachten, dass der Anteil von Personen mit sehr hohen (6) und hohen (5) Computerkenntnissen nach Abbildung \ref{fig:rowsPer:knowledge} einen Großteil der Befragten ausmacht. In Abbildung \ref{fig:rowsPer:knowledgeCite} sind die Werte einer unabhängigen Studie der Österreichischen Computer Gesellschaft\cite{demographicDistributionKnowledge} dargestellt, welche eine weitreichende Übereinstimmung mit der Verteilung der Stichprobe dieser Arbeit haben. Folglich können repräsentative Aussagen im Bezug auf den Kenntnisstand der Nutzer getätigt werden.
             
@@ -378,6 +378,7 @@
                 Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt. Es ist erkennbar, dass in allen Kategorien mindestens eine signifikante Abweichung gegeben ist. Das bedeutet, dass ein Teil der Befragten nicht geraten hat sondern auf Grundlage von Vorwissen, das im Fall von Browsern im Durchschnitt falsch, sonst aber richtig ist, eine Entscheidung gefällt haben.
             
         \subsection{Nutzungsgründe für Open Source Software}
+            \label{section:usageReasons}
             Im Jahr 2015 führte die Forschungsstelle Digitale Nachhaltigkeit des Instituts für Wirtschaftsinformatik an der Universität Bern eine Befragung von 200 Schweizer Unternehmen durch\cite{oss:studie}. Eins der Ziele der Umfrage war es, ein Ranking der Nutzungsgründe von \gls{oss} für Unternehmen aufzustellen.
 
             \paragraph{Sicht der Nutzer auf Unternehmen}
@@ -447,11 +448,22 @@
     
     \clearpage
     \section{Zusammenfassung}
-        \subsection{Verbesserungen am Fragebogen}
-            % TODO
-            \begin{itemize}
-                \item In Umfrage sollte man nicht "Ja/Nein" sondern "Ja/Nein/Keine Ahnung" machen. Evtl. auch die maximal mögliche Signifikanz dessen erörtern.
-            \end{itemize}
+        \subsection{Selbstreflexion}
+            Im Folgenden wird kritisch auf das Vorgehen in dieser Arbeit eingegangen und mögliche Methoden zur Optimierung der Ergebnisse dargelegt.
+            \paragraph{Wann ist eine Software Open Source?}
+                In der Umfrage wurde lediglich erwähnt, dass eine Software im Sinne der Umfrage auch als Open Source gilt, wenn sie \gls{oss} beinhaltet. Wie bereits Eingangs beschrieben, werden genutzte Programmiersprachen oder Datenbanken nicht als signifikante Open Source Komponente betrachtet. Dies wurde aus dem Fragebogen nicht ersichtlich und man hätte für bessere Umfrageergebnisse genauer spezifizieren müssen, dass eine Anwendung als Open Source gilt, wenn sie selbst quelloffen ist aber auch dann, wenn ihre Funktionalität durch die Entfernung von Open Source Komponenten signifikant eingeschränkt wäre.
+                
+            \paragraph{Enthaltung}
+                Da der Fragebogen bei der Anwendungsmatrix lediglich die Optionen \emph{Ja} und \emph{Nein} beinhaltete besteht die Möglichkeit, dass die Befragten die Felder auf ihrem Standardwert ({\scriptsize Nein}) belassen haben, wenn sie sich unsicher waren. Dies hätte man umgehen können, indem man eine dritte Option für das Feld einfügt, welche Enthaltung repräsentiert. Um der potentiellen Verfälschung der Ergebnisse entgegenzuwirken wurden in dieser Arbeit lediglich die Datenpunkte der Nutzer in Betracht gezogen, die auch angegeben haben die Anwendung zu verwenden.
+                
+            \paragraph{Kategorisierung}
+                Für die privaten Nutzungsgründe gab es in der Umfrage ein Freifeld. Für den Vergleich in Abschnitt \ref{section:usageReasons} war es nötig die abgegebenen Stimmen in die Kategorien der Studie bzgl. der Unternehmen einzuordnen, was aufgrund der grundverschiedenen Anwendungszwecke dazu geführt hat, dass in dem Diagramm einige Stimmen der privaten Nutzungsgründe aufgrund der fehlenden Übereinstimmung mit den kommerziellen Kategorien nicht repräsentiert sind.
+                
+            \paragraph{Kulturelle Differenzen}
+                Es ist auf Basis der genutzten Verbreitungsmedien zu vermuten, dass die Datensätze überwiegend Stimmen aus Deutschland enthalten. Die Vergleichsstudien stammen aus Österreich\cite{demographicDistributionKnowledge} und der Schweiz\cite{oss:studie}. Dabei ist nicht auszuschließen, dass aufgrund diverser wirtschaftlicher, politischer, ideologischer und kulturelle Gründe die demographische Verteilung und IT-Kenntnisse sowie Nutzungsgründen von denen in Deutschland abweichen. Dies lässt sich auf Basis der vorliegenden Daten nicht ausschließen, aber es ist aufgrund der geografischen Nähe und nahezu identischen Sprache der drei zuvor genannten Ländern wahrscheinlich, dass die Abweichung nur gering ausfällt.
+                
+            \paragraph{Spiele}
+                Die Anwendungsmatrix in der Umfrage beinhaltete eine Kategorie zu Computerspielen. Diese Kategorie beinhaltete aufgrund eines Fehlers auf Seiten der Autoren ausschließlich Spiele, welche nicht Open Source sind und nur unsignifikante Mengen von Open Source Software für die kritische Funktionalität verwenden. Dies führte dazu, dass alle Datenpunkte aus dieser Kategorie für die Auswertung im Rahmen der drei in dieser Arbeit betrachteten Hauptaspekte nicht verwendbar waren. Aus dem Datensatz lässt sich lediglich schließen, dass $88.6\%$ der Leute, welche die Spiele nutzen, diese korrekt als Closed-Source einschätzten.
             
         \subsection{Fazit}
             % TODO
