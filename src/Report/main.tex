@@ -1,5 +1,4 @@
 \documentclass[a4paper]{article}
-% \documentclass[a4paper]{book}
 
 % Imports
 \usepackage[utf8]{inputenc}
@@ -12,8 +11,6 @@
 \usepackage{epigraph}
 \usepackage[acronym]{glossaries}
 \usepackage{graphicx}
-%\usepackage{pdfpages}
-%\usepackage{attachfile2}
 \usepackage{tabularx}
 \usepackage{cite}
 \usepackage{hyperref}
@@ -46,9 +43,8 @@
 \setlength\epigraphrule{0pt}
 
 % Glossary
-% \newglossaryentry{oss}{name=OSS, description={Open Source Software}}
 \newacronym{oss}{OSS}{Open Source Software}
-
+\newglossaryentry{css}{name={Closed Source Software}, description={Software, deren Source Code im Gegensatz zu \gls{oss} nicht offen für jeden einsichtig hat.}}
 
 \begin{document}
     % Title page
@@ -70,20 +66,20 @@
 
     % --- Content ---
     
-                    
+    \glsresetall                
     \section{Fragestellung}\label{section:fragestellung}
-        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Grundbaustein von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}.
+        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von \gls{oss}, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Grundbaustein von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}.
 		
-		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\cite{oss:lotus-to-linux}. Ausserdem ist zu erwarten, dass Nutzer mit höheren Computerkenntnissen mehr über \gls{oss} wissen.
+		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit \gls{oss} in Kontakt stehen, sie diese also als Teil größerer, kommerzieller \gls{css} nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit \gls{oss} interagiert\cite{oss:lotus-to-linux}. Ausserdem ist zu erwarten, dass Nutzer mit höheren Computerkenntnissen mehr über \gls{oss} wissen.
 
 		\subsection{Definitionen} % TODO: Achtung Reihenfolge Definitionen/Fragestellung
-            \subsubsection{Open Source Software}
+            \subsubsection{\acrlong{oss}}
                 \begin{quote} 
                     \centering 
                     Software wird als Open Source bezeichnet, wenn ihr Quelltext frei zugänglich ist. Sie kann in kommerzieller Software eingesetzt werden, ihre Nutzung muss allerdings nicht kostenfrei sein. 
                 \end{quote}
                 
-            \subsubsection{Nutzung von Open Source Software}\label{section:indirekte_nutzung}
+            \subsubsection{Nutzung von \acrlong{oss}}\label{section:indirekte_nutzung}
                 Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterteilt werden.
                 
                 \paragraph{Direkte Nutzung}
@@ -186,9 +182,10 @@
                 Um die Reichweite der Umfrage zu maximieren und die Kosten zu minimieren wurde diese in Form einer Onlinebefragung umgesetzt. Dabei wurden Kanäle wie Social Media, E-Mail, Messenger genutzt, um auf die Umfrage aufmerksam zu machen. Zudem wurde der Link zu der Umfrage über private Kontakte und an der Nordakademie verbreitet.
                 
     \section{Auswertung}
-        \subsection{Vorgehen}
+        \subsection{Vorgehen}\label{section:auswertung:vorgehen}
             \paragraph{Auswertung des Freifeldes}
                 Um mit den Daten des Freifeldes zu arbeiten, wurden zunächst alle Begriffe, die die Nutzer eingegeben haben, einer Kategorie zugeordnet. Alle Begriffe, denen kein sinnvoller Inhalt zugeordnet werden konnte, wurden in der Kategorie '-' zusammengefasst. Diese Zuordnung ist in Tabelle \ref{table:categories} dargestellt.\\
+
             
             \begin{table}[!htbp]
                 \begin{tabularx}{\textwidth}{rX}
@@ -253,6 +250,10 @@
                 \label{table:privateToCommercialCategories}
             \end{table}
             
+            \paragraph{Auswertung der Anwendungsmatrix}
+                Bei der Auswertung der Anwendungsmatrix wird in der gesamten Arbeit immer nur auf die Antworten der Nutzer eingegangen, die auch angaben die Software zu nutzen. Die Gründe hierfür werden in Abschnitt \ref{section:selbstreflexion} Selbstreflexion beleuchtet.
+                %TODO: Nur wenn man die Software nutzt -> ref zu selbstreflexion
+            
         \subsection{Validität der Ergebnisse}
             Der Eingangs auf Seite \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
             \subsubsection{Demographische Gruppen}\label{section:demographic_groups}
@@ -304,9 +305,9 @@
                     Für die Auswertung wurden die Anwendungen wie auch schon bei der Umfrage in die Kategorien Browser, Betriebssysteme (OS), Web und Desktop gruppiert.
                     
                 \paragraph{Werte}
-                    Zunächst ist zu betrachten, wie das Ergebnis ausfallen würde, wenn alle Befragten raten würden. In diesem Fall wäre der Erwartungswert die Hälfte der Befragten, da es sich um eine Ja-Nein-Frage, also eine Frage mit nur zwei Möglichkeiten, handelt.
+                    Zunächst ist zu betrachten, wie das Ergebnis ausfallen würde, wenn alle Befragten raten würden. In diesem Fall wäre der Erwartungswert die Hälfte der Befragten, da es sich um eine Ja-Nein-Frage, also eine Frage mit nur zwei Möglichkeiten, handelt
                     
-                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50 \%$ und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
+                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50\%$\footnote{In der Umfrage war diese Frage als `Checkbox` umgesetzt, die den Standardwert \emph{Nein} hat. Wie in Abschnitt \ref{section:selbstreflexion} beschrieben kann es hierdurch zu einer Senkung des Erwartungswertes kommen. Hier wird dennoch mit 50\% gerechnet, um eine Auswertung möglich zu machen.}. und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
             
                     \begin{tabularx}{\textwidth}{rX}
                         \textbf{Ergebnis} & \textbf{Auswertung} \\\hline
@@ -316,8 +317,8 @@
                     \end{tabularx}
             
                 \paragraph{Auswahl der Datenpunkte}
-                    Bei der Auswertung wurden nur die Antworten von Nutzern in die Auswertung einbezogen, die auch angegeben haben die Software zu verwendet um sicher zu stellen, dass den Nutzern die Software bekannt ist. Andernfalls würde das Ergebnis verfälscht werden.
-                    
+                    Wie in Abschnitt \ref{section:auswertung:vorgehen} erläutert wurden bei der Auswertung nur die Antworten von Nutzern in die Auswertung einbezogen, die auch angegeben haben die Software zu verwendet.
+                                        
             \subsubsection{Auswertung des Diagramms}\label{section:knowledge_analysis}
                 In dem Graphen wird deutlich, dass das Wissen über \gls{oss} stark von der Kategorie abhängig ist. %TODO: add more content
             
@@ -351,7 +352,7 @@
                 \end{table}
                 
                 \paragraph{Positive Abweichung}
-                    Besonders gut haben Desktop Anwendungen ({\scriptsize 18.03\%}) und Betriebsysteme ({\scriptsize 20.14\%}) abgeschnitten.
+                    Besonders gut haben Desktop Anwendungen ({\scriptsize 40.29\%}) und Betriebsysteme ({\scriptsize 36.07\%}) abgeschnitten.
                     
                     Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird und damit auch andere Desktop Betriebssysteme als nicht \gls{oss}.%TODO: Citation needed.
                     %TODO: Hier Auswertung vervollständigen.
@@ -359,7 +360,7 @@
                     %TODO: Desktop
                 
                 \paragraph{Negative Abweichung}
-                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:software_examples}}, da hier falsches Wissen ({\scriptsize -8.13\%}) vorhanden ist.                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung vervollständigen. 
+                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:software_examples}}, da hier falsches Wissen ({\scriptsize -16.26\%}) vorhanden ist.                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung vervollständigen. 
                     
                 \paragraph{Signifikanz der Abweichung}
                 
@@ -377,7 +378,7 @@
                     \label{table:knowledge_by_category_sigma}
                 \end{table}
                 
-                Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt. 
+                Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt sind. 
                 
                 \subparagraph{Beschreibung der Tabelle}
                     Die Spalten \emph{Erfolge} und \emph{Umfang} geben an, wie viele Antworten insgesamt beziehungsweise korrekt abgegeben wurden. In den Spalten $2\sigma$-Umgebung und $3\sigma$-Umgebung sind die entsprechenden Sigma-Umgebungen eingetragen, anhand derer sich die Signifikanz in der letzten Spalte bestimmen lässt. Signifikant bedeutet dabei, dass die Abweichung in der $2\sigma$-Umgebung liegt und damit mit einer $95.5\%$ Wahrscheinlichkeit tatsächlich abweicht. Hoch bedeutet, dass die Abweichung in der $3\sigma$-Umgebung liegt und damit mit einer $99.7\%$ Wahrscheinlichkeit tatsächlich abweicht.
@@ -506,7 +507,7 @@
     
     \clearpage
     \section{Zusammenfassung}
-        \subsection{Selbstreflexion}
+        \subsection{Selbstreflexion}\label{section:selbstreflexion}
             Im Folgenden wird kritisch auf das Vorgehen in dieser Arbeit eingegangen und mögliche Methoden zur Optimierung der Ergebnisse dargelegt.
             \paragraph{Wann ist eine Software Open Source?}
                 In der Umfrage wurde lediglich erwähnt, dass eine Software im Sinne der Umfrage auch als Open Source gilt, wenn sie \gls{oss} beinhaltet. Wie bereits Eingangs beschrieben, werden genutzte Programmiersprachen oder Datenbanken nicht als signifikante Open Source Komponente betrachtet. Dies wurde aus dem Fragebogen nicht ersichtlich und man hätte für bessere Umfrageergebnisse genauer spezifizieren müssen, dass eine Anwendung als Open Source gilt, wenn sie selbst quelloffen ist aber auch dann, wenn ihre Funktionalität durch die Entfernung von Open Source Komponenten signifikant eingeschränkt wäre.
