@@ -26,7 +26,7 @@ guard let inputString = try? String(contentsOf: URL(fileURLWithPath: CommandLine
 let csv = CSwiftV(with: inputString)
 let rows = csv.rows
 
-byActivity(rows: rows)
+//byActivity(rows: rows)
 
 //privateVsUserCommercial(rows: rows)
 //usesOSSOverview(rows: rows)
@@ -38,4 +38,13 @@ byActivity(rows: rows)
 //    $0.pcKentnisse > 4
 //})
 //commercialReasoning(rows: rows)
+
+//usesOSSStackedOSS(rows: rows.filter { $0.pcKentnisse > 4 })
+
+//usesOSSStackedOSS(rows: rows.filter { row in
+//    let activity = activityMapping[row.tätigkeit] ?? row.tätigkeit
+////    return activity == "Student"
+////    return activity == "Arbeitstätig"
+//    return activity == "Schüler"
+//})
 

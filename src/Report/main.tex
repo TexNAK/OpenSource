@@ -1,5 +1,4 @@
 \documentclass[a4paper]{article}
-% \documentclass[a4paper]{book}
 
 % Imports
 \usepackage[utf8]{inputenc}
@@ -12,8 +11,6 @@
 \usepackage{epigraph}
 \usepackage[acronym]{glossaries}
 \usepackage{graphicx}
-%\usepackage{pdfpages}
-%\usepackage{attachfile2}
 \usepackage{tabularx}
 \usepackage{cite}
 \usepackage{hyperref}
@@ -46,9 +43,8 @@
 \setlength\epigraphrule{0pt}
 
 % Glossary
-% \newglossaryentry{oss}{name=OSS, description={Open Source Software}}
 \newacronym{oss}{OSS}{Open Source Software}
-
+\newglossaryentry{css}{name={Closed Source Software}, description={Software, deren Source Code im Gegensatz zu \gls{oss} nicht offen für jeden einsichtig hat.}}
 
 \begin{document}
     % Title page
@@ -70,20 +66,20 @@
 
     % --- Content ---
     
-                    
-    \section{Fragestellung}
-        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von Open Source Software, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Grundbaustein von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}.
+    \glsresetall                
+    \section{Fragestellung}\label{section:fragestellung}
+        In der Arbeit soll die Frage, inwiefern Endanwender Open Source Software wahrnehmen, untersucht werden. Dabei soll nicht nur die \emph{direkte} Verwendung von \gls{oss}, wie es zum Beispiel bei LibreOffice der Fall ist, eine Rolle spielen, sondern auch die \emph{indirekte} Nutzung als Komponente kommerzieller Lösungen wie Chromium als Grundbaustein von Google Chrome\footnote{Genaue Definitionen sind in \ref{section:indirekte_nutzung} zu finden.}.
 		
-		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit Open Source Software in Kontakt stehen, sie diese also als Teil größerer, kommerzieller Closed Source Software nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit Open Source Software interagiert\cite{oss:lotus-to-linux}.
+		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit \gls{oss} in Kontakt stehen, sie diese also als Teil größerer, kommerzieller \gls{css} nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit \gls{oss} interagiert\cite{oss:lotus-to-linux}. Ausserdem ist zu erwarten, dass Nutzer mit höheren Computerkenntnissen mehr über \gls{oss} wissen.
 
 		\subsection{Definitionen} % TODO: Achtung Reihenfolge Definitionen/Fragestellung
-            \subsubsection{Open Source Software}
+            \subsubsection{\acrlong{oss}}
                 \begin{quote} 
                     \centering 
                     Software wird als Open Source bezeichnet, wenn ihr Quelltext frei zugänglich ist. Sie kann in kommerzieller Software eingesetzt werden, ihre Nutzung muss allerdings nicht kostenfrei sein. 
                 \end{quote}
                 
-            \subsubsection{Nutzung von Open Source Software}\label{section:indirekte_nutzung}
+            \subsubsection{Nutzung von \acrlong{oss}}\label{section:indirekte_nutzung}
                 Die Nutzung von Open Source Software durch Endanwender kann in zwei Arten unterteilt werden.
                 
                 \paragraph{Direkte Nutzung}
@@ -155,7 +151,7 @@
 			               Chrome & Ja & \tiny\url{https://www.chromium.org} [Online; letzter Zugriff 26.02.1018] \\
 			               Safari & Ja & \tiny\url{https://developer.apple.com/opensource/} [Online; letzter Zugriff 26.02.1018]\\
 			               Chromium & Ja & \tiny\url{https://www.chromium.org} [Online; letzter Zugriff 26.02.1018] \\
-			               Opera & Ja & \\\hline
+			               Opera & Ja & \tiny\url{https://dev.opera.com/blog/300-million-users-and-move-to-webkit/}\\\hline
 			               Windows & Nein & \tiny\url{https://www.microsoft.com/en-us/windows/get-windows-10} [Online; letzter Zugriff 06.03.1018]\\
 			               macOS & Nein & \tiny\url{https://developer.apple.com/opensource/} [Online; letzter Zugriff 26.02.1018] \\
 			               Linux & Ja & \tiny\url{https://www.kernel.org/category/faq.html} [Online; letzter Zugriff 06.03.1018] \\
@@ -186,9 +182,10 @@
                 Um die Reichweite der Umfrage zu maximieren und die Kosten zu minimieren wurde diese in Form einer Onlinebefragung umgesetzt. Dabei wurden Kanäle wie Social Media, E-Mail, Messenger genutzt, um auf die Umfrage aufmerksam zu machen. Zudem wurde der Link zu der Umfrage über private Kontakte und an der Nordakademie verbreitet.
                 
     \section{Auswertung}
-        \subsection{Vorgehen}
+        \subsection{Vorgehen}\label{section:auswertung:vorgehen}
             \paragraph{Auswertung des Freifeldes}
                 Um mit den Daten des Freifeldes zu arbeiten, wurden zunächst alle Begriffe, die die Nutzer eingegeben haben, einer Kategorie zugeordnet. Alle Begriffe, denen kein sinnvoller Inhalt zugeordnet werden konnte, wurden in der Kategorie '-' zusammengefasst. Diese Zuordnung ist in Tabelle \ref{table:categories} dargestellt.\\
+
             
             \begin{table}[!htbp]
                 \begin{tabularx}{\textwidth}{rX}
@@ -253,9 +250,13 @@
                 \label{table:privateToCommercialCategories}
             \end{table}
             
+            \paragraph{Auswertung der Anwendungsmatrix}
+                Bei der Auswertung der Anwendungsmatrix wird in der gesamten Arbeit immer nur auf die Antworten der Nutzer eingegangen, die auch angaben die Software zu nutzen. Die Gründe hierfür werden in Abschnitt \ref{section:selbstreflexion} Selbstreflexion beleuchtet.
+                %TODO: Nur wenn man die Software nutzt -> ref zu selbstreflexion
+            
         \subsection{Validität der Ergebnisse}
             Der Eingangs auf Seite \pageref{section:fragestellung:answerAmount} erwähnte Umfang von 80 Antworten wurde mit 119 Datensätzen zum Zeitpunkt der Auswertung übertroffen. Die Stichprobe ist somit groß genug um signifikante Schlussfolgerungen im Bezug auf die Leitfrage zu ziehen. % TODO Give reason why
-            \subsubsection{Demographische Gruppen}
+            \subsubsection{Demographische Gruppen}\label{section:demographic_groups}
                 Abbildung \ref{fig:rowsPer:activity} legt dar, dass der Anteil der Schüler nur sehr gering ist und diese Gruppe mit nur acht Teilnehmern nicht repräsentativ ist. Des Weiteren ist zu beachten, dass der Anteil von Personen mit sehr hohen (6) und hohen (5) Computerkenntnissen nach Abbildung \ref{fig:rowsPer:knowledge} einen Großteil der Befragten ausmacht. In Abbildung \ref{fig:rowsPer:knowledgeCite} sind die Werte einer unabhängigen Studie der Österreichischen Computer Gesellschaft\cite{demographicDistributionKnowledge} dargestellt, welche eine weitreichende Übereinstimmung mit der Verteilung der Stichprobe dieser Arbeit haben. Folglich können repräsentative Aussagen im Bezug auf den Kenntnisstand der Nutzer getätigt werden.
             
         \begin{figure}[h]
@@ -285,10 +286,12 @@
 
     \clearpage
     \section{Ergebnisse}
-        \subsection{Wissen über OSS}
-            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} durch Endanwender ist, ob diese wissen, dass es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
+        %TODO: Einleitung 3 Aspekte etc.
+        \subsection{Wissen über OSS}\label{section:knowledge_oss}
+            Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} durch Endnutzern ist, ob diese wissen, ob es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
             
-            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche Open Source sind oder \gls{oss} nutzen. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
+            % TODO reference zu kritik: Nur daten, wenn oss genutzt
+            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche Open Source sind oder \gls{oss} nutzt. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
             
                         
             \begin{figure}
@@ -303,9 +306,9 @@
                     Für die Auswertung wurden die Anwendungen wie auch schon bei der Umfrage in die Kategorien Browser, Betriebssysteme (OS), Web und Desktop gruppiert.
                     
                 \paragraph{Werte}
-                    Zunächst ist zu betrachten, wie das Ergebnis ausfallen würde, wenn alle Befragten raten würden. In diesem Fall wäre der Erwartungswert die Hälfte der Befragten, da es sich um eine Ja-Nein-Frage, also eine Frage mit nur zwei Möglichkeiten, handelt.
+                    Zunächst ist zu betrachten, wie das Ergebnis ausfallen würde, wenn alle Befragten raten würden. In diesem Fall wäre der Erwartungswert die Hälfte der Befragten, da es sich um eine Ja-Nein-Frage, also eine Frage mit nur zwei Möglichkeiten, handelt
                     
-                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50 \%$ und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
+                    Um also die Ausgangsfrage bewerten zu können ist es notwendig sich die Differenz zwischen $50\%$\footnote{In der Umfrage war diese Frage als `Checkbox` umgesetzt, die den Standardwert \emph{Nein} hat. Wie in Abschnitt \ref{section:selbstreflexion} beschrieben kann es hierdurch zu einer Senkung des Erwartungswertes kommen. Hier wird dennoch mit 50\% gerechnet, um eine Auswertung möglich zu machen.}. und dem Ergebnis der Umfrage zu betrachten. Dabei kann es zu drei möglichen Fällen kommen:\\
             
                     \begin{tabularx}{\textwidth}{rX}
                         \textbf{Ergebnis} & \textbf{Auswertung} \\\hline
@@ -315,9 +318,9 @@
                     \end{tabularx}
             
                 \paragraph{Auswahl der Datenpunkte}
-                    Bei der Auswertung wurden nur die Antworten von Nutzern in die Auswertung einbezogen, die auch angegeben haben die Software zu verwendet um sicher zu stellen, dass den Nutzern die Software bekannt ist. Andernfalls würde das Ergebnis verfälscht werden.
-                    
-            \subsubsection{Auswertung des Diagramms}
+                    Wie in Abschnitt \ref{section:auswertung:vorgehen} erläutert wurden bei der Auswertung nur die Antworten von Nutzern in die Auswertung einbezogen, die auch angegeben haben die Software zu verwendet.
+                                        
+            \subsubsection{Auswertung des Diagramms}\label{section:knowledge_analysis}
                 In dem Graphen wird deutlich, dass das Wissen über \gls{oss} stark von der Kategorie abhängig ist. %TODO: add more content
             
                 Nimmt man an, dass $r \in \left[0...1\right]$ Prozent der Befragten sicher wussten, dass es sich um \gls{oss} Software handelt, bedeutet dies, dass $d = 1 - r$ Prozent geraten haben. Unter Einbezug des Erwartungswertes von $50 \%$ beim Raten erhält man dann als Gesamt-Erwartungswert $\mu$:
@@ -350,7 +353,7 @@
                 \end{table}
                 
                 \paragraph{Positive Abweichung}
-                    Besonders gut haben Desktop Anwendungen ({\scriptsize 18.03\%}) und Betriebsysteme ({\scriptsize 20.14\%}) abgeschnitten.
+                    Besonders gut haben Desktop Anwendungen ({\scriptsize 40.29\%}) und Betriebsysteme ({\scriptsize 36.07\%}) abgeschnitten.
                     
                     Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird und damit auch andere Desktop Betriebssysteme als nicht \gls{oss}.%TODO: Citation needed.
                     %TODO: Hier Auswertung vervollständigen.
@@ -358,25 +361,32 @@
                     %TODO: Desktop
                 
                 \paragraph{Negative Abweichung}
-                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:software_examples}}, da hier falsches Wissen ({\scriptsize -8.13\%}) vorhanden ist.                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung vervollständigen. 
+                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:software_examples}}, da hier falsches Wissen ({\scriptsize -16.26\%}) vorhanden ist.                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung vervollständigen. 
                     
                 \paragraph{Signifikanz der Abweichung}
                 
                 \begin{table}
                     \centering
                     \begin{tabular}{rccccc}
-                        Kategorie & Umfang & Erfolge & 2-Sigma & 3-Sigma & Signifikanz \\\hline\hline
-                        Browser & $246$ & $103$ & \tiny{[ 107.3156 ; 138.6844 ]} & \tiny{[ 99.4734 ; 146.5266 ]} & Signifikant\\
-                        OS & $122$ & $83$ & \tiny{[ 49.9546 ; 72.0454 ]} &  \tiny{[ 44.432 ; 77.568 ]} & Hoch\\
-                        Web & $181$ & $106$ & \tiny{[ 77.0464 ; 103.9536 ]} &  \tiny{[ 70.3196 ; 110.6804 ]} &  Signifikant\\
-                        Desktop & $278$ & $195$ & \tiny{[ 122.3267 ; 155.6733 ]} & \tiny{[ 113.99 ; 164.01 ]} & Hoch\\\hline
-                        Gesamt & $827$ & $487$ & \tiny{[ 384.7424 ; 442.2576 ]} & \tiny{[ 370.3636 ; 456.6364 ]} & Hoch
+                        Kategorie & Umfang & Erfolge & $2\sigma$-Umgebung & $3\sigma$-Umgebung & Signifikanz \\\hline\hline
+                        Browser & $246$ & $103$ & \tiny [ 107.3156 ; 138.6844 ] & \tiny [ 99.4734 ; 146.5266 ] & Signifikant\\
+                        OS & $122$ & $83$ & \tiny [ 49.9546 ; 72.0454 ] &  \tiny [ 44.432 ; 77.568 ] & Hoch\\
+                        Web & $181$ & $106$ & \tiny [ 77.0464 ; 103.9536 ] &  \tiny [ 70.3196 ; 110.6804 ] &  Signifikant\\
+                        Desktop & $278$ & $195$ & \tiny [ 122.3267 ; 155.6733 ] & \tiny [ 113.99 ; 164.01 ] & Hoch\\\hline
+                        Gesamt & $827$ & $487$ & \tiny [ 384.7424 ; 442.2576 ] & \tiny [ 370.3636 ; 456.6364 ] & Hoch
                     \end{tabular}
                     \caption{Signifikanz der Abweichung vom Erwartungswert}
                     \label{table:knowledge_by_category_sigma}
                 \end{table}
                 
-                Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt. Es ist erkennbar, dass in allen Kategorien mindestens eine signifikante Abweichung gegeben ist. Das bedeutet, dass ein Teil der Befragten nicht geraten hat sondern auf Grundlage von Vorwissen, das im Fall von Browsern im Durchschnitt falsch, sonst aber richtig ist, eine Entscheidung gefällt haben.
+                Um sicherzustellen, dass die Abweichung vom Raten signifikant ist, wurde ein Signifikanztest durchgeführt, dessen Ergebnisse in Tabelle \ref{table:knowledge_by_category_sigma} dargestellt sind. 
+                
+                \subparagraph{Beschreibung der Tabelle}
+                    Die Spalten \emph{Erfolge} und \emph{Umfang} geben an, wie viele Antworten insgesamt beziehungsweise korrekt abgegeben wurden. In den Spalten $2\sigma$-Umgebung und $3\sigma$-Umgebung sind die entsprechenden Sigma-Umgebungen eingetragen, anhand derer sich die Signifikanz in der letzten Spalte bestimmen lässt. Signifikant bedeutet dabei, dass die Abweichung in der $2\sigma$-Umgebung liegt und damit mit einer $95.5\%$ Wahrscheinlichkeit tatsächlich abweicht. Hoch bedeutet, dass die Abweichung in der $3\sigma$-Umgebung liegt und damit mit einer $99.7\%$ Wahrscheinlichkeit tatsächlich abweicht.
+                    
+                \subparagraph{Auswertung}
+                    Es ist erkennbar, dass in allen Kategorien mindestens eine signifikante Abweichung gegeben ist. Das bedeutet, dass ein Teil der Befragten nicht geraten hat sondern auf Grundlage von Vorwissen eine Entscheidung gefällt hat. Im Fall der Browser ist dieses Vorwissen im Durchschnitt falsch, bei allen anderen Kategorien richtig.
+                    
             
         \subsection{Nutzungsgründe für Open Source Software}
             \label{section:usageReasons}
@@ -447,9 +457,58 @@
                     Betrachtet man ebenfalls die Werte innerhalb des Toleranzbereichs, so findet man weitere Beispiele, welche diese These ({\scriptsize Kosteneinsparungen, Innovation, Mitarbeitende}) unterstreichen. Es lässt sich anhand der vorliegenden Daten allerdings nicht zweifelsfrei beweisen, dass die Punkte lediglich aufgrund der Projektion und nicht aufgrund des Wissens der Nutzer in dem inneren Fehlerbereich liegen.\\
                     Nimmt man alle Datenpunkte die eine maximale Abweichung von zwei zu den privaten Nutzungsgründen haben und geht davon aus, dass diese ihre aktuelle Position aufgrund der Projektion haben, so bleibt lediglich ein Punkt in dem inneren Toleranzbereich übrig. Dies ist der Aspekt der \emph{Unabhängigkeit}, welcher eindeutig von den Nutzern richtig in den inneren Toleranzbereich eingeordnet wurde.
     
+        \subsection{Demographische Differenzen}
+            Da es selten der Fall ist, dass Wissen in der Gesellschaft homogen verteilt ist, enthielt die Umfrage sowohl ein Frage zur Selbsteinschätzung der Computerkenntnisse als auch eine zur aktuellen Tätigkeit, um darauf basierend Verschiebungen in der Wissensverbreitung zu untersuchen.
+            
+            \subsubsection{Selbsteinschätzung}
+                % TODO reference zu kritik: Nur daten, wenn oss genutzt
+                Um zu ermitteln, ob es Differenzen bei verschiedenen Selbsteinschätzungen gibt, wurde die Korrektheit der Angabe, ob eine Software open source ist wie in Abschnitt \ref{section:knowledge_oss} nach Kategorie gruppiert ausgewertet. Dabei wurde aber die Antworten der Nutzer mit einer Selbsteinschätzung von eins bis vier (im Folgenden als Gruppe 1-4 bezeichnet) und die der Nutzer mit fünf oder sechs (im Folgenden als Gruppe 5-6 bezeichnet) getrennt zusammengefasst und in Abbildung \ref{figure:knowledge_by_category_self_assessment} dargestellt, um diese vergleichen zu können.
+                
+                \paragraph{Signifikanz}
+                    Um die Signifikanz der Differenzen beurteilen zu können wurde ein Signifikanztest der Abweichung der Ergebnisse der Gruppe 5-6 zu den Ergebnissen der Gruppe 1-4 durchgeführt und in Tabelle \ref{table:knowledge_by_category_sigma_self_assessment} zusammengefasst.
+                    
+                    \subparagraph{Beschreibung der Tabelle}
+                        Die Spalte \emph{1-4} gibt an, wie viel Prozent der Gruppe 1-4 korrekt \gls{oss} erkannt haben. Die Spalten \emph{5-6} und \emph{$\sum$5-6} geben an, wie viele Antworten der Gruppe 5-6 korrekt beziehungsweise insgesamt abgegeben wurden. Die restlichen Spalten sind wie in Abschnitt \ref{section:knowledge_analysis} zu verstehen.
+                        
+                    \subparagraph{Auswertung}
+                        Die Signifikanz der Abweichung ist in fast allen Kategorien sowie in der Gesamtauswertung hoch. Besonders extrem sind die Unterschiede in den Kategorien Browser und Betriebsysteme. Es ist aber zu beachten, dass die Gruppe 5-6 in der Kategorie Browser und die Gruppe 1-4 in der Kategorie Betriebsysteme lediglich 50\% erreicht haben und damit nach der Auswertung in Abschnitt \ref{section:knowledge_analysis} kein Wissen vorhanden ist. Das bedeutet, dass die zwei Differenz zwei verschiedene Ursachen haben: Einmal liegt es am falschen Wissen der Gruppe 1-4 und einmal an der richtigen Wissen der Gruppe 1-5.
+                        
+                        Insgesamt ist die Gruppe 5-6 besser als die Gruppe 1-4, wenn es um das Wissen über \gls{oss} geht. Diese Ergebnis deckt sich mit den Erwartungen aus Abschnitt \ref{section:fragestellung}.
+                    
+                \begin{figure}
+                    \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudgingDetailedOSSOnlyByKnowledge.pdf}
+                    \caption{Wissen über \gls{oss} nach Selbsteinschätzung}
+                    \label{figure:knowledge_by_category_self_assessment}
+                \end{figure}
+                
+                \begin{table}
+                    \centering
+                    \begin{tabular}{rcccccc}
+                        Kategorie & 1-4 & 5-6 & $\sum$ 5-6 & $2\sigma$-Umgebung & $3\sigma$-Umgebung & Signifikanz \\\hline\hline
+                        Browser & $29.47\%$ & $75$ & $151$ & \tiny [ 33.3003 ; 55.7102 ] & \tiny [ 27.6978 ; 61.3127 ] & Hoch\\
+                        OS & $44.74\%$ & $66$ & $84$ & \tiny  [ 28.4647 ; 46.6932 ]  &  \tiny  [ 23.9076 ; 51.2503 ]  & Hoch\\
+                        Web & $54.55\%$ & $70$ & $115$ & \tiny [ 52.0479 ; 73.4067 ] &  \tiny  [ 46.7082 ; 78.7464 ]  &  Signifikant\\
+                        Desktop & $60.66\%$ & $158$ & $217$ & \tiny  [ 117.2304 ; 146.0155 ]  & \tiny  [ 110.0342 ; 153.2117 ]  & Hoch\\\hline
+                        Gesamt & $45.38\%$ & $369$ & $567$ & \tiny [ 233.6207 ; 281.0409 ] & \tiny  [ 221.7656 ; 292.8959 ]  & Hoch
+                    \end{tabular}
+                    \caption{Signifikanz der Abweichung nach Selbsteinschätzung}
+                    \label{table:knowledge_by_category_sigma_self_assessment}
+                \end{table}
+            
+            \subsubsection{Tätigkeit}
+                Der zweite Aspekt, der hier zur Auswertung der demographischen Differenzen behandelt wird, ist die aktuelle Tätigkeit und damit indirekt, wenn auch nicht eindeutig, verbunden das Alter der Befragten. Zur Auswertung wurden die Tätigkeiten in die Gruppen `Schüler`, `Student` und `Arbeitstätig` unterteilt. Wie auch bei der Selbsteinschätzung wurden diese Gruppen verwendet, um das Wissen über \gls{oss} zu vergleichen. Wie in der graphischen Darstellung in Abbildung \ref{figure:knowledge_by_occupation} zu sehen hat keine der Gruppen in mehreren Kategorien gleichartig auffällige Abweichung und auch in der Gesamtauswertung sind keine Auffälligkeiten zu erkennen. Die aktuelle Tätigkeit oder das Alter scheint nur begrenzt Auswirkungen auf das Wissen über \gls{oss} zu haben.
+            
+            \begin{figure}
+                \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudgingDetailedOSSOnlyByOccupation.pdf}
+                \caption{Wissen über \gls{oss} nach Tätigkeit}
+                \label{figure:knowledge_by_occupation}
+            \end{figure}
+            
+    
+    
     \clearpage
     \section{Zusammenfassung}
-        \subsection{Selbstreflexion}
+        \subsection{Selbstreflexion}\label{section:selbstreflexion}
             Im Folgenden wird kritisch auf das Vorgehen in dieser Arbeit eingegangen und mögliche Methoden zur Optimierung der Ergebnisse dargelegt.
             \paragraph{Wann ist eine Software Open Source?}
                 In der Umfrage wurde lediglich erwähnt, dass eine Software im Sinne der Umfrage auch als Open Source gilt, wenn sie \gls{oss} beinhaltet. Wie bereits Eingangs beschrieben, werden genutzte Programmiersprachen oder Datenbanken nicht als signifikante Open Source Komponente betrachtet. Dies wurde aus dem Fragebogen nicht ersichtlich und man hätte für bessere Umfrageergebnisse genauer spezifizieren müssen, dass eine Anwendung als Open Source gilt, wenn sie selbst quelloffen ist aber auch dann, wenn ihre Funktionalität durch die Entfernung von Open Source Komponenten signifikant eingeschränkt wäre.
