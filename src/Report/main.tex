@@ -72,7 +72,7 @@
 		
 		Es wird erwartet, dass viele Nutzer unbewusst und indirekt mit \gls{oss} in Kontakt stehen, sie diese also als Teil größerer, kommerzieller \gls{css} nutzen, sich dessen aber nicht bewusst sind. Außerdem ist zu erwarten, dass nur ein kleiner Teil der Anwender direkt mit \gls{oss} interagiert\cite{oss:lotus-to-linux}. Ausserdem ist zu erwarten, dass Nutzer mit höheren Computerkenntnissen mehr über \gls{oss} wissen.
 
-		\subsection{Definitionen} % TODO: Achtung Reihenfolge Definitionen/Fragestellung
+		\subsection{Definitionen}
             \subsubsection{\acrlong{oss}}
                 \begin{quote} 
                     \centering 
@@ -88,7 +88,7 @@
                     Beispiele für Direkte Nutzung:
                     \begin{itemize}
                         \item Wikipedia
-                        \item Thunderbird % TODO: mehr Beispiele
+                        \item Thunderbird
                     \end{itemize}
                     
                 \paragraph{Indirekte Nutzung}
@@ -98,15 +98,14 @@
                         \item Entwicklerwerkzeuge wie Compiler
                         \item Datenbanken wie MySQL
                         \item Betriebssysteme wie Linux 
-                    \end{itemize} % TODO: gibt es mehr? Apache Web server?
-                    Der Grund dafür liegt in der Verbreitung dieser Komponenten. % TODO: bessere Erklärung
+                    \end{itemize}
+                    Der Grund dafür liegt in der Verbreitung dieser Komponenten. Sie stellen einen Industriestandard dar und werden in einem großen Anteil aller Produkte verwendet.
                     
                     Beispiele für Indirekte Nutzung:
                     \begin{itemize}
-                        \item Google Chrome % TODO add reference to table
-                        \item macOS % TODO add reference to table
+                        \item Google Chrome
+                        \item macOS
                     \end{itemize}
-                    % TODO: mehr Beispiele
 
             
         
@@ -114,7 +113,7 @@
         Um zuverlässige Daten zu erhalten, die die aktuelle Wahrnehmung der Endanwender widerspiegeln, wurde eine Umfrage durchgeführt. Für die Sicherstellung der Repräsentativität der Umfrage wurden mindestens 80 Antworten erwartet.\label{section:fragestellung:answerAmount}
 		Die Umfrage wurde überwiegend quantitativ mit geschlossenen Fragen gestaltet, um den Aufwand für die Befragten zu minimieren und damit die Teilnehmerrate und Datenmenge zu maximieren.  % TODO: Cite
     
-		Zweck der Befragung ist es, einen repräsentativen Überblick über die Wahrnehmung von Open Source Software des Endanwenders zu erhalten. Dabei soll Aufschluss über die Verteilung von indirekter und direkter Nutzung gegeben werden. Außerdem soll evaluiert werden, welche Gründe die Nutzer für und gegen die Nutzung von Open Source Software sehen. % TODO: genauer mit der Umfrage abgleichen
+		Zweck der Befragung ist es, einen repräsentativen Überblick über die Wahrnehmung von Open Source Software des Endanwenders zu erhalten. Dabei soll Aufschluss über das Wissen über \gls{oss} gegeben werden. Außerdem soll evaluiert werden, welche Gründe die Nutzer für und gegen die Nutzung von Open Source Software sehen.
 	
 		\subsection{Design}
 		  \subsubsection{Aufbau}
@@ -286,11 +285,12 @@
 
     \clearpage
     \section{Ergebnisse}
-        %TODO: Einleitung 3 Aspekte etc.
+    
+        Die Ergebnisse der Umfrage sind in drei Aspekte gegliedert. Zunächst wird ermittelt, wie viel die Nutzer über \gls{oss} wissen. Anschließend wird analysiert, wo die Nutzer die Vorteile von \gls{oss} sehen. Dabei werden die Gründe für die private Nutzung, die Gründe für die kommerzielle Nutzung und die Gründe für kommerzieller Nutzung aus Sicht der Nutzer miteinander verglichen. Im letzten Abschnitt wird untersucht, welche Unterschiede es zwischen verschiedenen demographischen Gruppen gibt.
+        
         \subsection{Wissen über OSS}\label{section:knowledge_oss}
             Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} durch Endnutzern ist, ob diese wissen, ob es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
             
-            % TODO reference zu kritik: Nur daten, wenn oss genutzt
             Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche open source sind oder \gls{oss} nutzt. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
             
                         
@@ -355,13 +355,12 @@
                 \paragraph{Positive Abweichung}
                     Besonders gut haben Desktop Anwendungen ({\scriptsize 40.29\%}) und Betriebsysteme ({\scriptsize 36.07\%}) abgeschnitten.
                     
-                    Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird und damit auch andere Desktop Betriebssysteme als nicht \gls{oss}.%TODO: Citation needed.
-                    %TODO: Hier Auswertung vervollständigen.
+                    Bei Betriebssystemen lässt sich dieses gute Ergebnis damit erklären, dass Linux häufig als Beispiel für \gls{oss} verwendet wird. In dem Zusammenhang werden auch andere Betriebssysteme, die nicht \gls{oss} sind erwähnt. Dadurch scheint es mehr Nutzern bewusst zu sein, bei welchen Betriebsystemen es sich um \gls{oss} handelt.
                     
-                    %TODO: Desktop
+                    Das noch bessere Ergebnis bei Desktop Anwendungen könnte sich dadurch erklären lassen, dass sich Nutzer im Allgemeinen mehr mit Desktop Anwendungen auseinandersetzten, da diese zunächst herruntergeladen werden muss.
                 
                 \paragraph{Negative Abweichung}
-                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:software_examples}}, da hier falsches Wissen ({\scriptsize -16.26\%}) vorhanden ist.                        %TODO: Wie sieht es mit den oss Browsern aus. Hier Auswertung vervollständigen. 
+                    Bei Browsern scheint nicht bekannt zu sein, dass sowohl Apple mit WebKit als auch Google mit Chromium den Kern ihrer Browser als \gls{oss} veröffentlicht haben\footnote{Siehe Tabelle \ref{table:software_examples}}, da hier falsches Wissen ({\scriptsize -16.26\%}) vorhanden ist. 
                     
                 \paragraph{Signifikanz der Abweichung}
                 
