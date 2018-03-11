@@ -291,7 +291,7 @@
             Ein entscheidender Aspekt der Wahrnehmung von \gls{oss} durch Endnutzern ist, ob diese wissen, ob es sich bei Software um \gls{oss} handelt oder diese \gls{oss} verwendet.
             
             % TODO reference zu kritik: Nur daten, wenn oss genutzt
-            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche Open Source sind oder \gls{oss} nutzt. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
+            Um dies zu ermitteln, wurde im Abschnitt \emph{Nutzungsverhalten} der Umfrage gefragt, welche Anwendungen aus einer vorgegebenen Liste\footnote{Siehe Tabelle \ref{table:software_examples}} genutzt werden und welche open source sind oder \gls{oss} nutzt. Die Daten wurden mit Hilfe von Abbildung \ref{figure:knowledge_difference} ausgewertet.
             
                         
             \begin{figure}
@@ -467,7 +467,7 @@
                     Nimmt man alle Datenpunkte die eine maximale Abweichung von zwei zu den privaten Nutzungsgründen haben und geht davon aus, dass diese ihre aktuelle Position aufgrund der Projektion haben, so bleibt lediglich ein Punkt in dem inneren Toleranzbereich übrig. Dies ist der Aspekt der \emph{Unabhängigkeit}, welcher eindeutig von den Nutzern richtig in den inneren Toleranzbereich eingeordnet wurde.
     
         \subsection{Demographische Differenzen}
-            Da es selten der Fall ist, dass Wissen in der Gesellschaft homogen verteilt ist, enthielt die Umfrage sowohl ein Frage zur Selbsteinschätzung der Computerkenntnisse als auch eine zur aktuellen Tätigkeit, um darauf basierend Verschiebungen in der Wissensverbreitung zu untersuchen.
+            Da es selten der Fall ist, dass Wissen in der Gesellschaft homogen verteilt ist\footnote{Vor allem mit der voranschreitenden Arbeitsteilung, die seit dem sechzehnten Jahrhundert ununterbrochen andauert, ist es notwendig, dass auch das Wissen aufgeteilt ist\cite{mckeon:divison_of_knowledge}.}, enthielt die Umfrage sowohl ein Frage zur Selbsteinschätzung der Computerkenntnisse als auch eine zur aktuellen Tätigkeit, um darauf basierend Verschiebungen in der Wissensverbreitung zu untersuchen.
             
             \subsubsection{Selbsteinschätzung}
                 % TODO reference zu kritik: Nur daten, wenn oss genutzt
@@ -476,13 +476,12 @@
                 \paragraph{Signifikanz}
                     Um die Signifikanz der Differenzen beurteilen zu können wurde ein Signifikanztest der Abweichung der Ergebnisse der Gruppe 5-6 zu den Ergebnissen der Gruppe 1-4 durchgeführt und in Tabelle \ref{table:knowledge_by_category_sigma_self_assessment} zusammengefasst.
                     
-                    \subparagraph{Beschreibung der Tabelle}
-                        Die Spalte \emph{1-4} gibt an, wie viel Prozent der Gruppe 1-4 korrekt \gls{oss} erkannt haben. Die Spalten \emph{5-6} und \emph{$\sum$5-6} geben an, wie viele Antworten der Gruppe 5-6 korrekt beziehungsweise insgesamt abgegeben wurden. Die restlichen Spalten sind wie in Abschnitt \ref{section:knowledge_analysis} zu verstehen.
+                    Die Spalte \emph{1-4} gibt an, wie viel Prozent der Gruppe 1-4 korrekt \gls{oss} erkannt haben. Die Spalten \emph{5-6} und \emph{$\sum$5-6} geben an, wie viele Antworten der Gruppe 5-6 korrekt beziehungsweise insgesamt abgegeben wurden. Die restlichen Spalten sind wie in Abschnitt \ref{section:knowledge_analysis} zu verstehen.
                         
-                    \subparagraph{Auswertung}
-                        Die Signifikanz der Abweichung ist in fast allen Kategorien sowie in der Gesamtauswertung hoch. Besonders extrem sind die Unterschiede in den Kategorien Browser und Betriebsysteme. Es ist aber zu beachten, dass die Gruppe 5-6 in der Kategorie Browser und die Gruppe 1-4 in der Kategorie Betriebsysteme lediglich 50\% erreicht haben und damit nach der Auswertung in Abschnitt \ref{section:knowledge_analysis} kein Wissen vorhanden ist. Das bedeutet, dass die zwei Differenz zwei verschiedene Ursachen haben: Einmal liegt es am falschen Wissen der Gruppe 1-4 und einmal an der richtigen Wissen der Gruppe 1-5.
-                        
-                        Insgesamt ist die Gruppe 5-6 besser als die Gruppe 1-4, wenn es um das Wissen über \gls{oss} geht. Diese Ergebnis deckt sich mit den Erwartungen aus Abschnitt \ref{section:fragestellung}.
+                \paragraph{Auswertung}
+                    Die Signifikanz der Abweichung ist in fast allen Kategorien sowie in der Gesamtauswertung hoch. Besonders extrem sind die Unterschiede in den Kategorien Browser und Betriebsysteme. Wie aus dem Diagramm ersichtlich wird, ist zu beachten, dass die Gruppe 5-6 in der Kategorie Browser und die Gruppe 1-4 in der Kategorie Betriebsysteme lediglich 50\% erreicht haben und damit nach der Auswertung in Abschnitt \ref{section:knowledge_analysis} kein Wissen vorhanden ist. Das bedeutet, dass die Differenzen zwei verschiedene Ursachen haben: Einmal liegt es am falschen Wissen der Gruppe 1-4 und einmal an dem richtigen Wissen der Gruppe 1-5.
+                    
+                    Es lässt sich zusammenfassen, dass grundsätzlich Gruppe 5-6 besser als Gruppe 1-4 beurteilen konnte, os eine Anwendung \gls{oss} ist oder nutzt, also über mehr Wissen über \gls{oss} verfügt. Dieses Ergebnis deckt sich mit den Erwartungen aus Abschnitt \ref{section:fragestellung}. Man muss aber beachten, dass im Allgemeinen auch Gruppe 5-6 nicht überall Wissen hat.
                     
                 \begin{figure}
                     \includegraphics[width=\textwidth]{assets/results/openSourceJudging/openSourceJudgingDetailedOSSOnlyByKnowledge.pdf}
@@ -498,7 +497,7 @@
                         OS & $44.74\%$ & $66$ & $84$ & \tiny  [ 28.4647 ; 46.6932 ]  &  \tiny  [ 23.9076 ; 51.2503 ]  & Hoch\\
                         Web & $54.55\%$ & $70$ & $115$ & \tiny [ 52.0479 ; 73.4067 ] &  \tiny  [ 46.7082 ; 78.7464 ]  &  Signifikant\\
                         Desktop & $60.66\%$ & $158$ & $217$ & \tiny  [ 117.2304 ; 146.0155 ]  & \tiny  [ 110.0342 ; 153.2117 ]  & Hoch\\\hline
-                        Gesamt & $45.38\%$ & $369$ & $567$ & \tiny [ 233.6207 ; 281.0409 ] & \tiny  [ 221.7656 ; 292.8959 ]  & Hoch
+                        Gesamt & $45.38\%$ & $369$ & $567$ & \tiny [ 233.6207 ; 281.0409 ] & \tiny  [ 221.7656 ; 292.8959 ] & Hoch
                     \end{tabular}
                     \caption{Signifikanz der Abweichung nach Selbsteinschätzung}
                     \label{table:knowledge_by_category_sigma_self_assessment}
